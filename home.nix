@@ -17,6 +17,7 @@
     clipse
     rofi
     rofi-emoji
+    rofi-power-menu
     pwvucontrol
     swww
     stow
