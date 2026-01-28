@@ -38,10 +38,12 @@
 
   environment.systemPackages = with pkgs; [
     vim
+    clang
     gnumake
     lua51Packages.lua
     lua
     luarocks
+    cargo
     git
     fzf
     lsd
