@@ -1,10 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  imports = [ ./hardware-configuration.nix ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -32,9 +29,7 @@
     shell = pkgs.zsh;
   };
 
-  environment.shellAliases = {
-    "nrs" = "sudo nixos-rebuild switch";
-  };
+  environment.shellAliases = { "nrs" = "sudo nixos-rebuild switch"; };
 
   environment.systemPackages = with pkgs; [
     vim
@@ -50,6 +45,8 @@
     zoxide
     yazi
   ];
+
+  services.openssh.enable = true;
 
   system.stateVersion = "25.11";
 }
