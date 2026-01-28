@@ -18,6 +18,12 @@
   programs.zsh.enable = true;
   programs.hyprland.enable = true;
 
+  services.displayManager.sddm = {
+    enable = true;
+    theme = "catppuccin-mocha-lavender";
+    wayland.enable = true;
+  };
+
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -41,9 +47,14 @@
     cargo
     git
     fzf
+    ripgrep
     lsd
     zoxide
     yazi
+    (pkgs.catppuccin-sddm.override {
+      flavor = "mocha";
+      accent = "lavender";
+    })
   ];
 
   services.openssh.enable = true;
