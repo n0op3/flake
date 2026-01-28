@@ -16,7 +16,7 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  hardware.graphics =  {
+  hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
@@ -58,6 +58,7 @@
 
   environment.systemPackages = with pkgs; [
     vim
+    killall
     clang
     gnumake
     lua51Packages.lua

@@ -15,6 +15,7 @@
     clipse
     rofi
     rofi-emoji
+    pwvucontrol
     swww
     stow
     starship
