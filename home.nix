@@ -25,6 +25,8 @@
     starship
     kitty
     pywal16
+    bibata-cursors
+    pywalfox-native
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
