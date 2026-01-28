@@ -43,6 +43,7 @@
     luarocks
     git
     fzf
+    lsd
     zoxide
     yazi
   ];
