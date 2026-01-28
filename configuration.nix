@@ -33,6 +33,9 @@
   environment.systemPackages = with pkgs; [
     vim
     git
+    fzf
+    zoxide
+    yazi
   ];
 
   system.stateVersion = "25.11";
