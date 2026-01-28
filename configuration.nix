@@ -20,6 +20,11 @@
 
   programs.zsh.enable = true;
 
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
+
   users.users.n0op3 = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
