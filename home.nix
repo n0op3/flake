@@ -7,5 +7,6 @@
     stow
     starship
     kitty
+    pywal16
   ];
 }
