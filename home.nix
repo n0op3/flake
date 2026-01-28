@@ -12,6 +12,7 @@
     mpv
     playerctl
     iwgtk
+    wl-clipboard
     clipse
     rofi
     rofi-emoji
