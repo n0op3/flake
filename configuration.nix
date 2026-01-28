@@ -37,6 +37,10 @@
 
   environment.systemPackages = with pkgs; [
     vim
+    gnumake
+    lua51Packages.lua
+    lua
+    luarocks
     git
     fzf
     zoxide
