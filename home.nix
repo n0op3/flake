@@ -4,6 +4,18 @@
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
+    waybar
+    git-credential-manager
+    hyprlock
+    hypridle
+    brightnessctl
+    mpv
+    playerctl
+    iwgtk
+    clipse
+    rofi
+    rofi-emoji
+    swww
     stow
     starship
     kitty
