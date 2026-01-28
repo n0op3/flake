@@ -5,6 +5,11 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  swapDevices = [{
+    device = "/.swapfile";
+    size = 16 * 1024;
+  }];
+
   boot.loader.grub.enable = true;
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.device = "nodev";

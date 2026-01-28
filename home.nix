@@ -20,6 +20,7 @@
     rofi-power-menu
     pwvucontrol
     swww
+    vesktop
     stow
     starship
     kitty
