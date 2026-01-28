@@ -19,6 +19,7 @@
   time.timeZone = "Europe/Warsaw";
 
   programs.zsh.enable = true;
+  programs.hyprland.enable = true;
 
   programs.neovim = {
     enable = true;
