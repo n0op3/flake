@@ -5,6 +5,7 @@
 
   home.packages = with pkgs; [
     waybar
+    fastfetch
     git-credential-manager
     hyprlock
     hypridle
