@@ -56,6 +56,8 @@
 
   environment.shellAliases = { "nrs" = "sudo nixos-rebuild switch"; };
 
+  fonts.packages = with pkgs; [ nerd-fonts.jetbrains-mono ];
+
   environment.systemPackages = with pkgs; [
     vim
     killall
