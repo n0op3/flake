@@ -10,9 +10,15 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    blender-bin = {
+      url = "github:edolstra/nix-warez?dir=blender";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, zen-browser, ... }@inputs:
+  outputs =
+    { self, nixpkgs, home-manager, zen-browser, blender-bin, ... }@inputs:
     let system = "x86_64-linux";
     in {
       nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
