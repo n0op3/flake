@@ -29,6 +29,8 @@
     pywalfox-native
     tidal-hifi
     cava
+    grimblast
+    eog
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
