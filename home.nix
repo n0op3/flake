@@ -32,6 +32,8 @@
     grimblast
     eog
     heroic
+    wineWowPackages.stable
+    winetricks
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
