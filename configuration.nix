@@ -64,6 +64,7 @@
     "nrs" = "sudo nixos-rebuild switch";
     "nrsu" = "sudo nixos-rebuild switch --upgrade";
     "nsp" = "nix-shell -p";
+    "nxs" = "nix search nixpkgs";
   };
 
   fonts = {
