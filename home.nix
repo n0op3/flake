@@ -31,8 +31,6 @@
     cava
     grimblast
     eog
-    bat
-    tmux
     heroic
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];

@@ -88,6 +88,9 @@
     ripgrep
     lsd
     zoxide
+    bat
+    tmux
+    duf
     yazi
     (pkgs.catppuccin-sddm.override {
       flavor = "mocha";
