@@ -31,6 +31,7 @@
     cava
     grimblast
     eog
+    bat
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
