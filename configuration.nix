@@ -5,6 +5,13 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs;
+    [
+      # Any missing dynamic libraries for unpackaged programs
+      # go here, NOT in environment.systemPackages
+    ];
+
   boot.loader.grub = {
     enable = true;
     efiSupport = true;
