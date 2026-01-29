@@ -41,6 +41,7 @@
     networkmanager_dmenu
     dragon-drop
     ffmpeg
+    signal-desktop-bin
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
