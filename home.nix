@@ -34,6 +34,8 @@
     heroic
     wineWowPackages.stable
     winetricks
+    mako
+    libnotify
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
