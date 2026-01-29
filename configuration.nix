@@ -5,11 +5,6 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  swapDevices = [{
-    device = "/.swapfile";
-    size = 16 * 1024;
-  }];
-
   boot.loader.grub = {
     enable = true;
     efiSupport = true;
@@ -24,19 +19,9 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  services.xserver.videoDrivers = [ "nvidia" ];
-
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-  };
-
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
-    open = true;
-    nvidiaSettings = true;
   };
 
   networking.hostName = "nixos-btw";
