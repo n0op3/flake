@@ -12,7 +12,6 @@
     brightnessctl
     mpv
     playerctl
-    iwgtk
     wl-clipboard
     clipse
     rofi
@@ -39,6 +38,7 @@
     steam
     safe-rm
     davinci-resolve
+    networkmanager_dmenu
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
