@@ -27,6 +27,7 @@
     pywal16
     bibata-cursors
     pywalfox-native
+    tidal-hifi
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
