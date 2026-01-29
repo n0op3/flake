@@ -37,8 +37,8 @@
     mako
     libnotify
     steam
-    blender
     safe-rm
+    davinci-resolve
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
