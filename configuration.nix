@@ -91,6 +91,7 @@
     bat
     tmux
     duf
+    gdu
     yazi
     (pkgs.catppuccin-sddm.override {
       flavor = "mocha";
