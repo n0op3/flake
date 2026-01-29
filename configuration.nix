@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [ ./hardware-configuration.nix ./modules/system-packages.nix ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -66,33 +66,6 @@
     };
     packages = with pkgs; [ nerd-fonts.jetbrains-mono noto-fonts-cjk-sans ];
   };
-
-  environment.systemPackages = with pkgs; [
-    vim
-    btop
-    killall
-    clang
-    gnumake
-    lua51Packages.lua
-    lua
-    luarocks
-    cargo
-    git
-    fzf
-    ripgrep
-    lsd
-    zoxide
-    bat
-    tmux
-    duf
-    gdu
-    yazi
-    sleek-grub-theme
-    (catppuccin-sddm.override {
-      flavor = "mocha";
-      accent = "lavender";
-    })
-  ];
 
   services.openssh.enable = true;
 
