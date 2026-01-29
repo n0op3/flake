@@ -10,9 +10,13 @@
     size = 16 * 1024;
   }];
 
-  boot.loader.grub.enable = true;
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.device = "nodev";
+  boot.loader.grub = {
+    enable = true;
+    efiSupport = true;
+    device = "nodev";
+    theme = (pkgs.sleek-grub-theme.override { withStyle = "dark"; });
+    timeoutStyle = "hidden";
+  };
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.timeout = 2;
 
@@ -98,7 +102,8 @@
     duf
     gdu
     yazi
-    (pkgs.catppuccin-sddm.override {
+    sleek-grub-theme
+    (catppuccin-sddm.override {
       flavor = "mocha";
       accent = "lavender";
     })
