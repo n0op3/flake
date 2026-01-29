@@ -1,81 +1,28 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ./modules/system-packages.nix ];
+  system.stateVersion = "25.11";
+
+  imports = [
+    ./hardware-configuration.nix
+    ./modules/bootloader.nix
+    ./modules/system-packages.nix
+    ./modules/graphical-env.nix
+    ./modules/shell.nix
+    ./modules/users.nix
+  ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs;
-    [
-      # Any missing dynamic libraries for unpackaged programs
-      # go here, NOT in environment.systemPackages
-    ];
-
-  boot.loader.grub = {
-    enable = true;
-    efiSupport = true;
-    device = "nodev";
-    theme = (pkgs.sleek-grub-theme.override { withStyle = "dark"; });
-    timeoutStyle = "hidden";
-  };
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.timeout = 2;
-
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   nixpkgs.config.allowUnfree = true;
-
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
 
   networking.hostName = "nixos-btw";
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Warsaw";
 
-  programs.zsh.enable = true;
-  programs.hyprland.enable = true;
-
-  services.displayManager.sddm = {
-    enable = true;
-    theme = "catppuccin-mocha-lavender";
-    wayland.enable = true;
-  };
-
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
-
-  users.users.n0op3 = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ];
-    shell = pkgs.zsh;
-  };
-
-  environment.shellAliases = {
-    "nrs" = "sudo nixos-rebuild switch";
-    "nrsu" = "sudo nixos-rebuild switch --upgrade";
-    "nsp" = "nix-shell -p";
-    "nxs" = "nix search nixpkgs";
-  };
-
-  fonts = {
-    fontconfig = {
-      enable = true;
-      defaultFonts.monospace = [ "JetBrainsMono" "Noto Sans Mono" ];
-      antialias = true;
-      hinting.enable = true;
-      hinting.style = "slight";
-    };
-    packages = with pkgs; [ nerd-fonts.jetbrains-mono noto-fonts-cjk-sans ];
-  };
-
-  services.openssh.enable = true;
-
-  system.stateVersion = "25.11";
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = [
+    # Any missing dynamic libraries for unpackaged programs
+    # go here, NOT in environment.systemPackages
+  ];
 }
-

@@ -9,7 +9,6 @@
     lua
     luarocks
     cargo
-    git
     fzf
     ripgrep
     lsd
