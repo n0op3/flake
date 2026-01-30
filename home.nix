@@ -46,6 +46,11 @@
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
+  home.file.".local/share/icons/default" = {
+    source = "${pkgs.bibata-cursors}/share/icons/Bibata-Modern-Ice/";
+    recursive = true;
+  };
+
   programs.git = {
     enable = true;
     settings = {
