@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   system.stateVersion = "25.11";
 
   imports = [
@@ -10,6 +10,8 @@
     ./modules/shell.nix
     ./modules/users.nix
   ];
+
+  services.udev.packages = with pkgs; [ vial qmk-udev-rules ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;

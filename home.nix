@@ -13,6 +13,8 @@
     brightnessctl
     wlsunset
     vial
+    qmk
+    qmk-udev-rules
     mpv
     playerctl
     wl-clipboard
