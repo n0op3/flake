@@ -11,6 +11,7 @@
     swaylock-effects
     hypridle
     brightnessctl
+    wlsunset
     mpv
     playerctl
     wl-clipboard
