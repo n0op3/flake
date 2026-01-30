@@ -24,12 +24,7 @@
 
   outputs = { self, nixpkgs, home-manager, zen-browser, blender-bin
     , mac-style-plymouth, ... }@inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        overlays = [ inputs.mac-style-plymouth.overlays.default ];
-      };
+    let system = "x86_64-linux";
     in {
       nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
         inherit system;
