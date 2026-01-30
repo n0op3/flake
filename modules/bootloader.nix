@@ -4,6 +4,7 @@
     efiSupport = true;
     device = "nodev";
     theme = (pkgs.sleek-grub-theme.override { withStyle = "dark"; });
+    splashImage = null;
     timeoutStyle = "hidden";
   };
   boot.loader.efi.canTouchEfiVariables = true;
