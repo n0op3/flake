@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ./modules/bootloader.nix
     ./modules/system-packages.nix
+    ./modules/logind.nix
     ./modules/graphical-env.nix
     ./modules/shell.nix
     ./modules/users.nix
