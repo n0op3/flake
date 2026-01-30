@@ -12,6 +12,7 @@
     hypridle
     brightnessctl
     wlsunset
+    vial
     mpv
     playerctl
     wl-clipboard
