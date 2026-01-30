@@ -1,5 +1,4 @@
 { pkgs, ... }: {
-
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
 
@@ -20,6 +19,12 @@
 
       efi.canTouchEfiVariables = true;
       timeout = 0;
+    };
+
+    plymouth = {
+      enable = true;
+      theme = "mac-style";
+      themePackages = [ pkgs.mac-style-plymouth ];
     };
   };
 }

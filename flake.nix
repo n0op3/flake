@@ -15,11 +15,21 @@
       url = "github:edolstra/nix-warez?dir=blender";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    mac-style-plymouth = {
+      url = "github:SergioRibera/s4rchiso-plymouth-theme";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs =
-    { self, nixpkgs, home-manager, zen-browser, blender-bin, ... }@inputs:
-    let system = "x86_64-linux";
+  outputs = { self, nixpkgs, home-manager, zen-browser, blender-bin
+    , mac-style-plymouth, ... }@inputs:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ inputs.mac-style-plymouth.overlays.default ];
+      };
     in {
       nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
         inherit system;
@@ -33,6 +43,8 @@
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.users.n0op3 = ./home.nix;
           }
+
+          { nixpkgs.overlays = [ mac-style-plymouth.overlays.default ]; }
         ];
       };
     };
