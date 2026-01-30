@@ -8,6 +8,7 @@
     fastfetch
     git-credential-manager
     hyprlock
+    swaylock
     hypridle
     brightnessctl
     mpv
@@ -20,6 +21,7 @@
     pwvucontrol
     swww
     vesktop
+    discord-canary
     stow
     starship
     kitty
