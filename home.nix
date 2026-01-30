@@ -8,7 +8,7 @@
     fastfetch
     git-credential-manager
     hyprlock
-    swaylock
+    swaylock-effects
     hypridle
     brightnessctl
     mpv
