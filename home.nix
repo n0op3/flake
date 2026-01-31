@@ -42,6 +42,7 @@
     mako
     libnotify
     millennium-steam
+    prismlauncher
     safe-rm
     davinci-resolve
     networkmanager_dmenu
