@@ -14,8 +14,12 @@
     ];
 
     loader = {
-      systemd-boot.enable = true;
-      grub.enable = false;
+      grub = {
+        enable = true;
+        efiSupport = true;
+        device = "nodev";
+        splashImage = null;
+      };
       efi.canTouchEfiVariables = true;
       timeout = 0;
     };
