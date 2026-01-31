@@ -13,6 +13,8 @@
 
   services.udev.packages = with pkgs; [ vial qmk-udev-rules ];
 
+  services.tlp.enable = true;
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
