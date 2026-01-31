@@ -20,12 +20,13 @@
         device = "nodev";
         splashImage = null;
         configurationLimit = 16;
+        timeoutStyle = "hidden";
       };
       efi = {
         canTouchEfiVariables = true;
         efiSysMountPoint = "/boot/efi";
       };
-      timeout = 0;
+      timeout = 1;
     };
 
     plymouth = {
