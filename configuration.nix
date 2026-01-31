@@ -18,6 +18,8 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
+  hardware.bluetooth.enable = true;
+
   networking.hostName = "nixos-btw";
   networking.networkmanager.enable = true;
   networking.firewall = rec {
