@@ -10,6 +10,7 @@
       "udev.log_level=3"
       "systemd.show_status=auto"
       "vt.global_cursor_default=0"
+      "systemd.unit=graphical.target"
     ];
 
     loader = {
