@@ -52,6 +52,8 @@
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
+  services.kdeconnect.enable = true;
+
   home.file.".local/share/icons/default" = {
     source = "${pkgs.bibata-cursors}/share/icons/Bibata-Modern-Ice/";
     recursive = true;
