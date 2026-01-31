@@ -19,9 +19,8 @@
     playerctl
     wl-clipboard
     clipse
-    rofi
-    rofi-emoji
     rofi-power-menu
+    unipicker
     pwvucontrol
     swww
     vesktop
@@ -52,6 +51,11 @@
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
+
+  programs.rofi = {
+    enable = true;
+    plugins = [ pkgs.rofi-emoji ];
+  };
 
   services.kdeconnect.enable = true;
 
