@@ -18,7 +18,6 @@
     duf
     gdu
     yazi
-    sleek-grub-theme
     (catppuccin-sddm.override {
       flavor = "mocha";
       accent = "lavender";

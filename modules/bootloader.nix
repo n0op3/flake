@@ -8,15 +8,8 @@
     kernelParams = [ "quiet" "udev.log_level=3" "systemd.show_status=auto" ];
 
     loader = {
-      grub = {
-        enable = true;
-        efiSupport = true;
-        device = "nodev";
-        theme = (pkgs.sleek-grub-theme.override { withStyle = "dark"; });
-        splashImage = null;
-        timeoutStyle = "hidden";
-      };
-
+      systemd-boot.enable = true;
+      grub.enable = false;
       efi.canTouchEfiVariables = true;
       timeout = 0;
     };
