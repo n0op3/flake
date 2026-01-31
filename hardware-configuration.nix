@@ -30,8 +30,9 @@
     size = 18 * 1024;
   }];
 
+  boot.kernelParams = [ "resume_offset=13279232" ];
   boot.resumeDevice = "/dev/disk/by-uuid/6e3f1c13-b2d0-428b-87dd-0d5147cdae3c";
-  boot.kernelParams = [ "resume_offset=118441984" ];
+  powerManagement.enable = true;
 
   services.xserver.videoDrivers = [ "modesetting" "nvidia" ];
 
