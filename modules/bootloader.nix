@@ -19,8 +19,12 @@
         efiSupport = true;
         device = "nodev";
         splashImage = null;
+        configurationLimit = 16;
       };
-      efi.canTouchEfiVariables = true;
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot/efi";
+      };
       timeout = 0;
     };
 
