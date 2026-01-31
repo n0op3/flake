@@ -15,6 +15,7 @@
     zoxide
     bat
     tmux
+    unzip
     duf
     gdu
     yazi
