@@ -19,7 +19,13 @@
   networking.hostName = "nixos-btw";
   networking.networkmanager.enable = true;
   networking.firewall = rec {
-    allowedTCPPortRanges = [{
+    enable = true;
+    checkReversePath = "loose";
+
+    # Yeelight Station
+    allowedUDPPorts = [ 1982 ];
+
+    allowedTCPPortRanges = [{ # KDE Connect
       from = 1714;
       to = 1764;
     }];

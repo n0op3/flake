@@ -42,7 +42,7 @@
     winetricks
     mako
     libnotify
-    steam
+    millennium-steam
     safe-rm
     davinci-resolve
     networkmanager_dmenu

@@ -20,10 +20,12 @@
       url = "github:SergioRibera/s4rchiso-plymouth-theme";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    millenium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, zen-browser, blender-bin
-    , mac-style-plymouth, ... }@inputs:
+  outputs =
+    { self, nixpkgs, home-manager, zen-browser, blender-bin, ... }@inputs:
     let system = "x86_64-linux";
     in {
       nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
@@ -39,7 +41,12 @@
             home-manager.users.n0op3 = ./home.nix;
           }
 
-          { nixpkgs.overlays = [ mac-style-plymouth.overlays.default ]; }
+          {
+            nixpkgs.overlays = with inputs; [
+              mac-style-plymouth.overlays.default
+              millenium.overlays.default
+            ];
+          }
         ];
       };
     };
