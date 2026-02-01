@@ -59,6 +59,16 @@
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
+  programs.obs-studio = {
+    enable = true;
+    package = pkgs.obs-studio.override { cudaSupport = true; };
+    plugins = with pkgs.obs-studio-plugins; [
+      obs-vaapi
+      obs-vkcapture # Game capture on Wayland
+      wlrobs # Wayland window capture
+    ];
+  };
+
   catppuccin.kvantum = {
     enable = true;
     apply = true;
