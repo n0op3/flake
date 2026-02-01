@@ -59,6 +59,20 @@
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
+  catppuccin.kvantum = {
+    enable = true;
+    apply = true;
+    accent = "lavender";
+    flavor = "mocha";
+  };
+
+  qt = {
+    enable = true;
+    style.name = "kvantum";
+  };
+
+  home.sessionVariables = { QT_QPA_PLATFORMTHEME = "kvantum"; };
+
   programs.rofi = {
     enable = true;
     plugins = [ pkgs.rofi-emoji ];

@@ -22,10 +22,11 @@
     };
 
     millenium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+    catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs =
-    { self, nixpkgs, home-manager, zen-browser, blender-bin, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, zen-browser, blender-bin, catppuccin
+    , ... }@inputs:
     let system = "x86_64-linux";
     in {
       nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
@@ -33,12 +34,16 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
+          catppuccin.nixosModules.catppuccin
+
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs; };
-            home-manager.users.n0op3 = ./home.nix;
+            home-manager.users.n0op3 = {
+              imports = [ ./home.nix catppuccin.homeModules.catppuccin ];
+            };
           }
 
           {
