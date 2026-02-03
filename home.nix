@@ -43,7 +43,6 @@
     libnotify
     millennium-steam
     prismlauncher
-    safe-rm
     davinci-resolve
     networkmanager_dmenu
     dragon-drop
@@ -55,6 +54,7 @@
     fd
     plocate
     just
+    trash-cli
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
