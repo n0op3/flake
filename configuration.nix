@@ -38,6 +38,11 @@
 
   time.timeZone = "Europe/Warsaw";
 
+  programs.appimage = {
+    enable = true;
+    binfmt = true; # Allow running AppImages just by supplying their path
+  };
+
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = [
     # Any missing dynamic libraries for unpackaged programs
