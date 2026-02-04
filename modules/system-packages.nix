@@ -20,6 +20,7 @@
     gdu
     yazi
     trash-cli
+    usbutils
     (catppuccin-sddm.override {
       flavor = "mocha";
       accent = "lavender";
