@@ -58,6 +58,7 @@
     gcc
     opencode
     thunar
+    russ
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
