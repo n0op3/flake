@@ -12,8 +12,11 @@
   ];
 
   services.udev.packages = with pkgs; [ vial qmk-udev-rules ];
-
   services.tlp.enable = true;
+
+  programs.virt-manager.enable = true;
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
