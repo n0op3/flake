@@ -14,6 +14,11 @@
   services.udev.packages = with pkgs; [ vial qmk-udev-rules ];
   services.tlp.enable = true;
 
+  services.locate = {
+    enable = true;
+    interval = "never";
+  };
+
   programs.virt-manager.enable = true;
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;

@@ -52,7 +52,6 @@
     signal-desktop-bin
     blueberry
     fd
-    plocate
     just
     go
     gcc
