@@ -54,7 +54,6 @@
     fd
     plocate
     just
-    trash-cli
     go
     gcc
     opencode

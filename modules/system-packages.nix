@@ -19,6 +19,7 @@
     duf
     gdu
     yazi
+    trash-cli
     (catppuccin-sddm.override {
       flavor = "mocha";
       accent = "lavender";
