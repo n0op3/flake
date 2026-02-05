@@ -21,6 +21,7 @@
     yazi
     trash-cli
     usbutils
+    nettools
     (catppuccin-sddm.override {
       flavor = "mocha";
       accent = "lavender";
