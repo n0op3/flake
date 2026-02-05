@@ -22,6 +22,7 @@
     trash-cli
     usbutils
     nettools
+    tree
     (catppuccin-sddm.override {
       flavor = "mocha";
       accent = "lavender";
