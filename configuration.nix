@@ -22,7 +22,7 @@
     enable = true;
     keyboards = {
       laptop = {
-        ids = [ "*" ];
+        ids = [ "048d:c100:16f6bb0a" ];
         settings = {
           main = {
             capslock = "overload(meta, esc)";
