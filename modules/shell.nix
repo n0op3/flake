@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   programs.zsh.enable = true;
 
   programs.neovim = {
@@ -13,5 +14,6 @@
     "s" = "nix search nixpkgs";
     "rm" = "trash";
     "del" = "/run/current-system/sw/bin/rm";
+    "dv" = "nix develop";
   };
 }
