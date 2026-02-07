@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   environment.systemPackages = with pkgs; [
     vim
     btop
@@ -23,6 +24,7 @@
     usbutils
     nettools
     tree
+    man-pages
     (catppuccin-sddm.override {
       flavor = "mocha";
       accent = "lavender";
