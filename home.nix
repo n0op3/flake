@@ -85,7 +85,9 @@
     style.name = "kvantum";
   };
 
-  home.sessionVariables = { QT_QPA_PLATFORMTHEME = "kvantum"; };
+  home.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "kvantum";
+  };
 
   programs.rofi = {
     enable = true;

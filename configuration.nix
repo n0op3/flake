@@ -21,8 +21,8 @@
   services.keyd = {
     enable = true;
     keyboards = {
-      default = {
-        ids = [ "0fac:0ade:bea394c0" ]; # Laptop's keyboard
+      laptop = {
+        ids = [ "*" ];
         settings = {
           main = {
             capslock = "overload(meta, esc)";
