@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   system.stateVersion = "25.11";
 
   imports = [
@@ -11,8 +12,32 @@
     ./modules/users.nix
   ];
 
-  services.udev.packages = with pkgs; [ vial qmk-udev-rules ];
+  services.udev.packages = with pkgs; [
+    vial
+    qmk-udev-rules
+  ];
   services.tlp.enable = true;
+
+  services.keyd = {
+    enable = true;
+    keyboards = {
+      default = {
+        ids = [ "0fac:0ade:bea394c0" ]; # Laptop's keyboard
+        settings = {
+          main = {
+            capslock = "overload(meta, esc)";
+            esc = "capslock";
+          };
+          alt = {
+            h = "left";
+            j = "down";
+            k = "up";
+            l = "right";
+          };
+        };
+      };
+    };
+  };
 
   services.locate = {
     enable = true;
@@ -23,7 +48,10 @@
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nixpkgs.config.allowUnfree = true;
 
   hardware.bluetooth.enable = true;
@@ -37,10 +65,13 @@
     # Yeelight Station
     allowedUDPPorts = [ 1982 ];
 
-    allowedTCPPortRanges = [{ # KDE Connect
-      from = 1714;
-      to = 1764;
-    }];
+    allowedTCPPortRanges = [
+      {
+        # KDE Connect
+        from = 1714;
+        to = 1764;
+      }
+    ];
     allowedUDPPortRanges = allowedTCPPortRanges;
   };
 
