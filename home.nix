@@ -60,6 +60,10 @@
     russ
     smassh
     pamixer
+    python3
+    pkg-config
+    rustup
+    glrnvim
     vscode-extensions.vadimcn.vscode-lldb
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
