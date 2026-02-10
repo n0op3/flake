@@ -10,6 +10,7 @@
     hyprlock
     swaylock-effects
     hypridle
+    hyprshutdown
     brightnessctl
     wlsunset
     vial
