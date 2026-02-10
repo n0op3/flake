@@ -64,8 +64,14 @@
     pamixer
     python3
     pkg-config
-    rustup
     glrnvim
+    rustc
+    cargo
+    rustfmt
+    clippy
+    rust-analyzer
+    git-filter-repo
+    tokei
     vscode-extensions.vadimcn.vscode-lldb
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default

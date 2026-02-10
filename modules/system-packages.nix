@@ -25,7 +25,5 @@
     nettools
     tree
     man-pages
-    git-filter-repo
-    tokei
   ];
 }
