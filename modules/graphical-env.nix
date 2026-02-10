@@ -1,11 +1,25 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   programs.hyprland.enable = true;
 
+  programs.silentSDDM = {
+    enable = true;
+    theme = "nord";
+  };
+
   services.displayManager.sddm = {
     enable = true;
-    theme = "catppuccin-mocha-lavender";
     wayland.enable = true;
+    wayland.compositorCommand = "${lib.getExe' pkgs.kdePackages.kwin "kwin_wayland"} --drm --no-lockscreen --no-global-shortcuts --locale1";
+    package = pkgs.kdePackages.sddm;
+    extraPackages = [
+      pkgs.kdePackages.layer-shell-qt
+    ];
+    settings = {
+      General = {
+        InputMethod = "qtvirtualkeyboard";
+      };
+    };
   };
 
   fonts = {

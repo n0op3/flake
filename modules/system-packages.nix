@@ -27,9 +27,5 @@
     man-pages
     git-filter-repo
     tokei
-    (catppuccin-sddm.override {
-      flavor = "mocha";
-      accent = "lavender";
-    })
   ];
 }

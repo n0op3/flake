@@ -21,20 +21,37 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    silentSDDM = {
+      url = "github:uiriansan/SilentSDDM";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     millenium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
     catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, zen-browser, blender-bin, catppuccin
-    , ... }@inputs:
-    let system = "x86_64-linux";
-    in {
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      zen-browser,
+      blender-bin,
+      catppuccin,
+      silentSDDM,
+      ...
+    }@inputs:
+    let
+      system = "x86_64-linux";
+    in
+    {
       nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
           catppuccin.nixosModules.catppuccin
+          silentSDDM.nixosModules.default
 
           home-manager.nixosModules.home-manager
           {
@@ -42,7 +59,10 @@
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.users.n0op3 = {
-              imports = [ ./home.nix catppuccin.homeModules.catppuccin ];
+              imports = [
+                ./home.nix
+                catppuccin.homeModules.catppuccin
+              ];
             };
           }
 
