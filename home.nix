@@ -12,7 +12,7 @@
     hypridle
     hyprshutdown
     brightnessctl
-    wlsunset
+    hyprsunset
     vial
     qmk
     qmk-udev-rules
