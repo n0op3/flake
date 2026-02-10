@@ -56,6 +56,7 @@
     just
     go
     gcc
+    bear
     opencode
     thunar
     russ
