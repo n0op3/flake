@@ -72,6 +72,7 @@
     rust-analyzer
     git-filter-repo
     tokei
+    qalculate-gtk
     vscode-extensions.vadimcn.vscode-lldb
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
