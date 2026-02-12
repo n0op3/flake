@@ -25,5 +25,6 @@
     nettools
     tree
     man-pages
+    zip
   ];
 }
