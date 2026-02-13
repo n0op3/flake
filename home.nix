@@ -36,6 +36,7 @@
     tidal-hifi
     cava
     grimblast
+    satty
     eog
     heroic
     wineWowPackages.stable
