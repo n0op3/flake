@@ -58,6 +58,12 @@
 
   networking.hostName = "nixos-btw";
   networking.networkmanager.enable = true;
+  networking.networkmanager.dns = "none";
+  networking.nameservers = [
+    "1.1.1.3"
+    "1.0.0.3"
+    "1.1.1.1"
+  ];
   networking.firewall = rec {
     enable = true;
     checkReversePath = "loose";
