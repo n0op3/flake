@@ -65,7 +65,7 @@
     "1.1.1.1"
   ];
   networking.firewall = rec {
-    enable = true;
+    enable = false;
     checkReversePath = "loose";
 
     # Yeelight Station
