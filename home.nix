@@ -39,7 +39,7 @@
     satty
     eog
     heroic
-    wineWowPackages.stable
+    wineWow64Packages.stable
     winetricks
     mako
     libnotify
