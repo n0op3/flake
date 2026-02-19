@@ -79,6 +79,19 @@
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
+  programs.ninjabrain-bot = {
+    enable = true;
+    settings = {
+      hotkey_decrement.key = 57419; # "right"
+      hotkey_increment.key = 57421; # "left"
+
+      hotkey_reset = {
+        key = 19; # "r"
+        modifiers = [ "ALT_L" ];
+      };
+    };
+  };
+
   programs.obs-studio = {
     enable = true;
     package = pkgs.obs-studio.override { cudaSupport = true; };

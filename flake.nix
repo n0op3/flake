@@ -28,6 +28,7 @@
 
     millenium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
     catppuccin.url = "github:catppuccin/nix";
+    ninjabrain-bot.url = "https://tangled.org/althaea.zone/ninjabrain-bot-nix/archive/trunk";
   };
 
   outputs =
@@ -62,6 +63,7 @@
               imports = [
                 ./home.nix
                 catppuccin.homeModules.catppuccin
+                inputs.ninjabrain-bot.homeModules.default
               ];
             };
           }
