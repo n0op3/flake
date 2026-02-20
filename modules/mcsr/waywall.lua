@@ -1,5 +1,6 @@
 local waywall = require("waywall")
 local helpers = require("waywall.helpers")
+local Processes = require("waywork.processes")
 
 local config = {
     theme = {
@@ -8,14 +9,17 @@ local config = {
     },
 }
 
+local ensure_ninjabrain = Processes.ensure_application(waywall, programs.ninjabrain_bot)("ninjabrain.*\\.jar")
+waywall.listen("load", ensure_ninjabrain)
+
 config.input = {
     sensitivity = 8.02283846,
 }
 
 config.actions = {
     ["Ctrl-Shift-N"] = function()
-        waywall.exec(
-            "java -Dswing.defaultlaf=javax.swing.plaf.metal.MetalLookAndFeel -jar /home/n0op3/Apps/Ninjabrain-Bot-1.5.1.jar")
+        ensure_ninjabrain()
+        helpers.show_floating()
     end,
     ["Ctrl-N"] = function()
         helpers.toggle_floating()
