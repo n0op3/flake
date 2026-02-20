@@ -26,5 +26,6 @@
     tree
     man-pages
     zip
+    jdk21
   ];
 }
