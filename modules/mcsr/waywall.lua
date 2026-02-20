@@ -12,9 +12,8 @@ local config = {
 local ensure_ninjabrain = Processes.ensure_application(waywall, programs.ninjabrain_bot)("ninjabrain.*\\.jar")
 waywall.listen("load", ensure_ninjabrain)
 
-config.input = {
-    sensitivity = 8.02283846,
-}
+local normal_sens = 8.02283846;
+local tall_sens = 0.54121588;
 
 -- PATHS --
 local home_path = os.getenv("HOME") .. "/"
@@ -47,7 +46,7 @@ local mirrors = {
 
     tall_pie = make_mirror({
         src = { x = 0, y = 15958, w = 340, h = 426 },
-        dst = { x = 1130, y = 654, w = 340, h = 426 },
+        dst = { x = 2560 - 340, y = 1440 - 426, w = 340, h = 426 },
     }),
 
     eye_measure = make_mirror({
