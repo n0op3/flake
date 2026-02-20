@@ -43,8 +43,7 @@
     satty
     eog
     heroic
-    wineWow64Packages.stable
-    winetricks
+    inputs.nixpkgs-wine10.legacyPackages.${system}.wineWow64Packages.stableFull
     mako
     libnotify
     millennium-steam

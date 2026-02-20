@@ -34,6 +34,7 @@
 
     millenium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
     catppuccin.url = "github:catppuccin/nix";
+    nixpkgs-wine10.url = "github:NixOS/nixpkgs?rev=5e80541a726e08ddbf5f6922d2389891a8c299db";
   };
 
   outputs =
@@ -72,6 +73,7 @@
             home-manager.extraSpecialArgs = {
               inherit inputs;
               inherit mcsr-nixos;
+              inherit system;
             };
             home-manager.users.n0op3 = {
               imports = [
