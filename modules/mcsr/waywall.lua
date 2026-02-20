@@ -8,6 +8,10 @@ local config = {
     },
 }
 
+config.input = {
+    sensitivity = 8.02283846,
+}
+
 config.actions = {
     ["Ctrl-Shift-N"] = function()
         waywall.exec(
