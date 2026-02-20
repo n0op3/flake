@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,9 +27,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    mcsr-nixos = {
+      url = "https://git.uku3lig.net/uku/mcsr-nixos/archive/main.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     millenium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
     catppuccin.url = "github:catppuccin/nix";
-    ninjabrain-bot.url = "https://tangled.org/althaea.zone/ninjabrain-bot-nix/archive/trunk";
   };
 
   outputs =
@@ -40,6 +45,7 @@
       blender-bin,
       catppuccin,
       silentSDDM,
+      mcsr-nixos,
       ...
     }@inputs:
     let
@@ -48,22 +54,27 @@
     {
       nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs; };
+        specialArgs = {
+          inherit inputs;
+          inherit mcsr-nixos;
+        };
         modules = [
           ./configuration.nix
           catppuccin.nixosModules.catppuccin
           silentSDDM.nixosModules.default
+          ./modules/mcsr
 
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+            };
             home-manager.users.n0op3 = {
               imports = [
                 ./home.nix
                 catppuccin.homeModules.catppuccin
-                inputs.ninjabrain-bot.homeModules.default
               ];
             };
           }

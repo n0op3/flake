@@ -1,5 +1,12 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  ...
+}:
 
+let
+  mcsrPkgs = inputs.mcsr-nixos.${pkgs.stdenv.hostPlatform.system};
+in
 {
   home.stateVersion = "25.11";
 
@@ -78,19 +85,6 @@
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
-
-  programs.ninjabrain-bot = {
-    enable = true;
-    settings = {
-      hotkey_decrement.key = 57419; # "right"
-      hotkey_increment.key = 57421; # "left"
-
-      hotkey_reset = {
-        key = 19; # "r"
-        modifiers = [ "ALT_L" ];
-      };
-    };
-  };
 
   programs.obs-studio = {
     enable = true;

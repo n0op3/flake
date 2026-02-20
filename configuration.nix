@@ -10,6 +10,7 @@
     ./modules/graphical-env.nix
     ./modules/shell.nix
     ./modules/users.nix
+    ./modules/mcsr
   ];
 
   services.udev.packages = with pkgs; [
