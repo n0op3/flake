@@ -14,6 +14,7 @@
     swaylock-effects
     hypridle
     hyprshutdown
+    hyprpicker
     brightnessctl
     hyprsunset
     vial
