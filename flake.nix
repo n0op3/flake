@@ -60,9 +60,10 @@
         };
         modules = [
           ./configuration.nix
+          ./modules/mcsr/waywall.nix
           catppuccin.nixosModules.catppuccin
           silentSDDM.nixosModules.default
-          ./modules/mcsr
+          mcsr-nixos.nixosModules.waywall
 
           home-manager.nixosModules.home-manager
           {
@@ -70,10 +71,12 @@
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = {
               inherit inputs;
+              inherit mcsr-nixos;
             };
             home-manager.users.n0op3 = {
               imports = [
                 ./home.nix
+                ./modules/mcsr
                 catppuccin.homeModules.catppuccin
               ];
             };

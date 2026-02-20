@@ -3,10 +3,6 @@
   inputs,
   ...
 }:
-
-let
-  mcsrPkgs = inputs.mcsr-nixos.${pkgs.stdenv.hostPlatform.system};
-in
 {
   home.stateVersion = "25.11";
 
