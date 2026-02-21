@@ -1,10 +1,20 @@
-{ config, lib, modulesPath, ... }:
+{
+  config,
+  lib,
+  modulesPath,
+  ...
+}:
 
 {
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
-  boot.initrd.availableKernelModules =
-    [ "xhci_pci" "ahci" "nvme" "usbhid" "rtsx_pci_sdmmc" ];
+  boot.initrd.availableKernelModules = [
+    "xhci_pci"
+    "ahci"
+    "nvme"
+    "usbhid"
+    "rtsx_pci_sdmmc"
+  ];
   boot.initrd.kernelModules = [ "nvidia" ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
@@ -17,7 +27,10 @@
   fileSystems."/boot/efi" = {
     device = "/dev/disk/by-uuid/7088-FFE1";
     fsType = "vfat";
-    options = [ "fmask=0022" "dmask=0022" ];
+    options = [
+      "fmask=0022"
+      "dmask=0022"
+    ];
   };
 
   fileSystems."/mnt/data" = {
@@ -25,16 +38,21 @@
     fsType = "ext4";
   };
 
-  swapDevices = [{
-    device = "/.swapfile";
-    size = 18 * 1024;
-  }];
+  swapDevices = [
+    {
+      device = "/.swapfile";
+      size = 18 * 1024;
+    }
+  ];
 
   boot.kernelParams = [ "resume_offset=13279232" ];
   boot.resumeDevice = "/dev/disk/by-uuid/6e3f1c13-b2d0-428b-87dd-0d5147cdae3c";
   powerManagement.enable = true;
 
-  services.xserver.videoDrivers = [ "modesetting" "nvidia" ];
+  services.xserver.videoDrivers = [
+    "modesetting"
+    "nvidia"
+  ];
 
   hardware.graphics = {
     enable = true;
@@ -60,6 +78,5 @@
   '';
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.intel.updateMicrocode =
-    lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

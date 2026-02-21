@@ -27,5 +27,7 @@
     man-pages
     zip
     jdk21
+    vulkan-tools
+    vulkan-loader
   ];
 }
