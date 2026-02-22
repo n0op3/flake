@@ -2,18 +2,21 @@ local waywall = require("waywall")
 local helpers = require("waywall.helpers")
 local Processes = require("waywork.processes")
 
-local config = {
-    theme = {
-        background = "#303030ff",
-        ninb_anchor = "topright",
-    },
-}
-
 local ensure_ninjabrain = Processes.ensure_application(waywall, programs.ninjabrain_bot)("ninjabrain.*\\.jar")
 waywall.listen("load", ensure_ninjabrain)
 
 local normal_sens = 8.02283846;
 local tall_sens = 0.54121588;
+
+local config = {
+    theme = {
+        background = "#303030ff",
+        ninb_anchor = "topright",
+    },
+    input = {
+        sensitivity = normal_sens,
+    }
+}
 
 -- PATHS --
 local home_path = os.getenv("HOME") .. "/"

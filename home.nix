@@ -47,6 +47,7 @@
     mako
     libnotify
     millennium-steam
+    gamemode
     prismlauncher
     davinci-resolve
     networkmanager_dmenu
