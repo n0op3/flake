@@ -7,6 +7,7 @@
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
+    anki
     waybar
     fastfetch
     git-credential-manager
