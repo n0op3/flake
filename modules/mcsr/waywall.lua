@@ -129,15 +129,15 @@ local resolutions = {
 }
 
 config.actions = {
-    ["F4"] = resolutions.thin,
-    ["F5"] = resolutions.tall,
-    ["F6"] = resolutions.wide,
+    ["*-F4"] = resolutions.thin,
+    ["*-F5"] = resolutions.tall,
+    ["*-F6"] = resolutions.wide,
 
     ["Shift-Delete"] = function()
         ensure_ninjabrain()
         helpers.show_floating()
     end,
-    ["*-Delete"] = function()
+    ["Delete"] = function()
         helpers.toggle_floating()
     end
 }
