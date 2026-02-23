@@ -135,7 +135,7 @@ config.actions = {
 
     ["Shift-Delete"] = function()
         ensure_ninjabrain()
-        helpers.show_floating()
+        helpers.toggle_floating()
     end,
     ["Delete"] = function()
         helpers.toggle_floating()
