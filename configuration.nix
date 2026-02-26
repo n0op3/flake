@@ -67,29 +67,38 @@
 
   hardware.bluetooth.enable = true;
 
-  networking.hostName = "nixos-btw";
-  networking.networkmanager.enable = true;
-  networking.networkmanager.dns = "none";
-  networking.nameservers = [
-    "1.1.1.3"
-    "1.0.0.3"
-    "1.1.1.1"
-  ];
-  networking.firewall = rec {
-    enable = true;
-    checkReversePath = "loose";
+  networking = {
+    hostName = "nixos-btw";
 
-    # Yeelight Station
-    allowedUDPPorts = [ 1982 ];
+    networkmanager = {
+      enable = true;
+      dns = "none";
+      waitOnline = false;
+    };
 
-    allowedTCPPortRanges = [
-      {
-        # KDE Connect
-        from = 1714;
-        to = 1764;
-      }
+    nameservers = [
+      "1.1.1.3"
+      "1.0.0.3"
+      "1.1.1.1"
     ];
-    allowedUDPPortRanges = allowedTCPPortRanges;
+
+    firewall = rec {
+      enable = true;
+      checkReversePath = "loose";
+
+      # Yeelight Station
+      allowedUDPPorts = [ 1982 ];
+
+      allowedTCPPortRanges = [
+        {
+          # KDE Connect
+          from = 1714;
+          to = 1764;
+        }
+      ];
+
+      allowedUDPPortRanges = allowedTCPPortRanges;
+    };
   };
 
   time.timeZone = "Europe/Warsaw";
