@@ -8,27 +8,12 @@
 
   home.packages = with pkgs; [
     anki
-    waybar
     fastfetch
     git-credential-manager
-    hyprlock
-    swaylock-effects
-    hypridle
-    hyprshutdown
-    hyprpicker
-    brightnessctl
-    hyprsunset
     vial
     qmk
     qmk-udev-rules
     mpv
-    playerctl
-    wl-clipboard
-    clipse
-    rofi-power-menu
-    unipicker
-    pwvucontrol
-    swww
     vesktop
     discord-canary
     stow

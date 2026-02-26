@@ -78,6 +78,7 @@
             home-manager.users.n0op3 = {
               imports = [
                 ./home.nix
+                ./modules/hyprland.nix
                 ./modules/mcsr
                 catppuccin.homeModules.catppuccin
               ];
