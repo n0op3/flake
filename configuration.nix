@@ -67,13 +67,13 @@
 
   hardware.bluetooth.enable = true;
 
+  systemd.services.NetworkManager-wait-online.enable = false;
   networking = {
     hostName = "nixos-btw";
 
     networkmanager = {
       enable = true;
       dns = "none";
-      waitOnline = false;
     };
 
     nameservers = [
