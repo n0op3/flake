@@ -36,6 +36,11 @@
   fileSystems."/mnt/data" = {
     device = "/dev/disk/by-uuid/529bbd8c-7656-4238-81eb-d4a69b0e44fe";
     fsType = "ext4";
+    options = [
+      "nofail"
+      "x-systemd.device-timeout=4"
+      "x-systemd.automount" # mount on first access
+    ];
   };
 
   swapDevices = [
