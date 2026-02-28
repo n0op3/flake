@@ -63,10 +63,19 @@
     git-filter-repo
     tokei
     qalculate-gtk
+    nwg-look
     vscode-extensions.vadimcn.vscode-lldb
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
+
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.adw-gtk3;
+    };
+  };
 
   catppuccin.kvantum = {
     enable = true;
