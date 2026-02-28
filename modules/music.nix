@@ -1,6 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, musnix, ... }:
 {
-  security.rtkit.enable = true;
+  musnix.enable = true;
 
   services.pipewire.alsa = {
     enable = true;

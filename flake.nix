@@ -3,6 +3,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-anki-patch.url = "github:NixOS/nixpkgs/c0f3d81a7ddbc2b1332be0d8481a672b4f6004d6";
 
+    musnix.url = "github:musnix/musnix";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -43,6 +45,7 @@
       self,
       nixpkgs,
       home-manager,
+      musnix,
       zen-browser,
       blender-bin,
       catppuccin,
@@ -67,6 +70,7 @@
           catppuccin.nixosModules.catppuccin
           silentSDDM.nixosModules.default
           mcsr-nixos.nixosModules.waywall
+          musnix.nixosModules.musnix
 
           home-manager.nixosModules.home-manager
           {

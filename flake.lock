@@ -417,6 +417,24 @@
         "type": "github"
       }
     },
+    "musnix": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1767232402,
+        "narHash": "sha256-li+h6crnhc5Zqs+M6pn7D7M0W9M63ECNennDjRgzioE=",
+        "owner": "musnix",
+        "repo": "musnix",
+        "rev": "d65f98e0b1f792365f1705653d7b2d266ceeff6e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "musnix",
+        "repo": "musnix",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1771848320,
@@ -483,6 +501,22 @@
     },
     "nixpkgs_3": {
       "locked": {
+        "lastModified": 1766902085,
+        "narHash": "sha256-coBu0ONtFzlwwVBzmjacUQwj3G+lybcZ1oeNSQkgC0M=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c0b0e0fddf73fd517c3471e546c0df87a42d53f4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_4": {
+      "locked": {
         "lastModified": 1771848320,
         "narHash": "sha256-0MAd+0mun3K/Ns8JATeHT1sX28faLII5hVLq0L3BdZU=",
         "owner": "NixOS",
@@ -522,7 +556,8 @@
         "mac-style-plymouth": "mac-style-plymouth",
         "mcsr-nixos": "mcsr-nixos",
         "millenium": "millenium",
-        "nixpkgs": "nixpkgs_3",
+        "musnix": "musnix",
+        "nixpkgs": "nixpkgs_4",
         "nixpkgs-anki-patch": "nixpkgs-anki-patch",
         "nixpkgs-wine10": "nixpkgs-wine10",
         "silentSDDM": "silentSDDM",
