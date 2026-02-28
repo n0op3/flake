@@ -16,5 +16,6 @@
     unipicker
     pwvucontrol
     swww
+    swaynotificationcenter
   ];
 }

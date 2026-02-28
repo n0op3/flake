@@ -30,7 +30,6 @@
     eog
     heroic
     inputs.nixpkgs-wine10.legacyPackages.${system}.wineWow64Packages.stableFull
-    mako
     libnotify
     millennium-steam
     gamemode
