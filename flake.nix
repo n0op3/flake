@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-anki-patch.url = "github:NixOS/nixpkgs/c0f3d81a7ddbc2b1332be0d8481a672b4f6004d6";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -62,6 +63,7 @@
         modules = [
           ./configuration.nix
           ./modules/mcsr/waywall.nix
+          ./modules/music.nix
           catppuccin.nixosModules.catppuccin
           silentSDDM.nixosModules.default
           mcsr-nixos.nixosModules.waywall

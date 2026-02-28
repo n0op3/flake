@@ -7,7 +7,7 @@
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
-    anki
+    inputs.nixpkgs-anki-patch.legacyPackages.${system}.anki
     fastfetch
     git-credential-manager
     vial
