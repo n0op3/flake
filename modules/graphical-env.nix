@@ -22,6 +22,10 @@
     };
   };
 
+  environment.systemPackages = with pkgs; [
+    adw-gtk3
+  ];
+
   fonts = {
     fontconfig = {
       enable = true;

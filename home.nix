@@ -69,13 +69,7 @@
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Adwaita-dark";
-      package = pkgs.adw-gtk3;
-    };
-  };
+  gtk.enable = true;
 
   catppuccin.kvantum = {
     enable = true;
