@@ -54,12 +54,15 @@
       ...
     }@inputs:
     let
-      system = "x86_64-linux";
+      system = {
+        arch = "x86_64-linux";
+        hostname = "shinjuku";
+      };
     in
     {
-      nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
-        inherit system;
+      nixosConfigurations.${system.hostname} = nixpkgs.lib.nixosSystem {
         specialArgs = {
+          inherit system;
           inherit inputs;
           inherit mcsr-nixos;
         };

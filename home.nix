@@ -7,7 +7,7 @@
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
-    inputs.nixpkgs-anki-patch.legacyPackages.${system}.anki
+    inputs.nixpkgs-anki-patch.legacyPackages.${pkgs.stdenv.hostPlatform.system}.anki
     fastfetch
     git-credential-manager
     vial
@@ -29,7 +29,7 @@
     satty
     eog
     heroic
-    inputs.nixpkgs-wine10.legacyPackages.${system}.wineWow64Packages.stableFull
+    inputs.nixpkgs-wine10.legacyPackages.${pkgs.stdenv.hostPlatform.system}.wineWow64Packages.stableFull
     libnotify
     millennium-steam
     gamemode

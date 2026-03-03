@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, system, ... }:
 {
   system.stateVersion = "25.11";
 
@@ -69,7 +69,7 @@
 
   systemd.services.NetworkManager-wait-online.enable = false;
   networking = {
-    hostName = "nixos-btw";
+    hostName = "${system.hostname}";
 
     networkmanager = {
       enable = true;
