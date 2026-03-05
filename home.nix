@@ -36,7 +36,7 @@
     ffmpeg
     gimp
     inkscape
-    signal-desktop-bin
+    signal-desktop
     blueberry
     fd
     just
