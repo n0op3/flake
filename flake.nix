@@ -89,6 +89,7 @@
                 ./home.nix
                 ./modules/hyprland.nix
                 ./modules/mcsr
+                ./modules/engineering.nix
                 catppuccin.homeModules.catppuccin
               ];
             };
