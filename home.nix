@@ -28,12 +28,8 @@
     grimblast
     satty
     eog
-    heroic
     inputs.nixpkgs-wine10.legacyPackages.${pkgs.stdenv.hostPlatform.system}.wineWow64Packages.stableFull
     libnotify
-    millennium-steam
-    gamemode
-    prismlauncher
     davinci-resolve
     networkmanager_dmenu
     dragon-drop
@@ -50,7 +46,6 @@
     opencode
     thunar
     russ
-    smassh
     pamixer
     python3
     pkg-config
