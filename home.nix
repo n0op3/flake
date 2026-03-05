@@ -38,6 +38,7 @@
     inkscape
     signal-desktop
     blueberry
+    yt-dlp
     fd
     just
     go
