@@ -1,7 +1,9 @@
 { pkgs, ... }:
 {
+  imports = [ ./mcsr/default.nix ];
+
   home.packages = with pkgs; [
-    lutris
+    lutris-free
     heroic
     millennium-steam
     gamemode

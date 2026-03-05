@@ -88,7 +88,7 @@
               imports = [
                 ./home.nix
                 ./modules/hyprland.nix
-                ./modules/mcsr
+                ./modules/games.nix
                 ./modules/engineering.nix
                 catppuccin.homeModules.catppuccin
               ];
