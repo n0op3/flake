@@ -16,8 +16,11 @@
     "rtsx_pci_sdmmc"
   ];
   boot.initrd.kernelModules = [ "nvidia" ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
+  boot.kernelModules = [
+    "kvm-intel"
+    "lenovo-legion-module"
+  ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [ lenovo-legion-module ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/6e3f1c13-b2d0-428b-87dd-0d5147cdae3c";
