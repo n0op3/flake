@@ -3,7 +3,7 @@
   imports = [ ./mcsr/default.nix ];
 
   home.packages = with pkgs; [
-    lutris-free
+    lutris-unwrapped
     heroic
     millennium-steam
     gamemode
