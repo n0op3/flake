@@ -3,10 +3,22 @@
   inputs,
   ...
 }:
+
+let
+  orca-slicer-fixed = pkgs.writeShellScriptBin "orca-slicer" ''
+    export __GLX_VENDOR_LIBRARY_NAME=mesa
+    export __EGL_VENDOR_LIBRARY_FILENAMES=/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json
+    export MESA_LOADER_DRIVER_OVERRIDE=zink
+    export GALLIUM_DRIVER=zink
+    export WEBKIT_DISABLE_DMABUF_RENDERER=1
+    exec ${pkgs.orca-slicer}/bin/orca-slicer "$@"
+  '';
+in
 {
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
+    orca-slicer-fixed
     inputs.nixpkgs-anki-patch.legacyPackages.${pkgs.stdenv.hostPlatform.system}.anki
     fastfetch
     git-credential-manager
