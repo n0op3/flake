@@ -35,6 +35,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    aagl = {
+      url = "github:ezKEa/aagl-gtk-on-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     millenium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
     catppuccin.url = "github:catppuccin/nix";
     nixpkgs-wine10.url = "github:NixOS/nixpkgs?rev=5e80541a726e08ddbf5f6922d2389891a8c299db";
@@ -51,6 +56,7 @@
       catppuccin,
       silentSDDM,
       mcsr-nixos,
+      aagl,
       ...
     }@inputs:
     let
@@ -73,6 +79,11 @@
           catppuccin.nixosModules.catppuccin
           silentSDDM.nixosModules.default
           mcsr-nixos.nixosModules.waywall
+          {
+            imports = [ aagl.nixosModules.default ];
+            nix.settings = aagl.nixConfig;
+            programs.anime-game-launcher.enable = true;
+          }
           musnix.nixosModules.musnix
 
           home-manager.nixosModules.home-manager
