@@ -9,6 +9,7 @@
 
   home.packages = with pkgs; [
     inputs.nixpkgs-anki-patch.legacyPackages.${pkgs.stdenv.hostPlatform.system}.anki
+    libreoffice
     fastfetch
     git-credential-manager
     vial
