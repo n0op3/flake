@@ -9,5 +9,6 @@
     gamemode
     prismlauncher
     smassh
+    vinegar
   ];
 }
