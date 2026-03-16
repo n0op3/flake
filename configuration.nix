@@ -16,7 +16,12 @@
     vial
     qmk-udev-rules
   ];
-  services.tlp.enable = true;
+  services.tlp = {
+    enable = true;
+    settings = {
+      DEVICES_TO_DISABLE_ON_STARTUP = "bluetooth";
+    };
+  };
 
   services.keyd = {
     enable = true;
@@ -69,7 +74,10 @@
   };
   nixpkgs.config.allowUnfree = true;
 
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = false;
+  };
 
   systemd.services.NetworkManager-wait-online.enable = false;
   networking = {
