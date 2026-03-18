@@ -17,6 +17,7 @@
     qmk-udev-rules
   ];
   services.tlp.enable = true;
+  powerManagement.powertop.enable = true;
 
   services.keyd = {
     enable = true;
@@ -33,6 +34,9 @@
             j = "down";
             k = "up";
             l = "right";
+            s = "prevsong";
+            d = "playpause";
+            f = "nextsong";
           };
         };
       };
