@@ -69,11 +69,18 @@
   };
   nixpkgs.config.allowUnfree = true;
 
+  hardware.enableAllFirmware = true;
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = false;
   };
   services.blueman.enable = true;
+
+  boot.extraModprobeConfig = ''
+    options iwlwifi power_save=0 power_level=0
+    options iwlmvm power_scheme=1
+    options iwlmvm bt_coex_active=1
+  '';
 
   systemd.services.NetworkManager-wait-online.enable = false;
   networking = {
