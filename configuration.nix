@@ -78,6 +78,7 @@
     enable = true;
     powerOnBoot = false;
   };
+  services.blueman.enable = true;
 
   systemd.services.NetworkManager-wait-online.enable = false;
   networking = {

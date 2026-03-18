@@ -39,7 +39,6 @@
     gimp
     inkscape
     signal-desktop
-    blueman
     yt-dlp
     fd
     just
