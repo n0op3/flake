@@ -16,12 +16,7 @@
     vial
     qmk-udev-rules
   ];
-  services.tlp = {
-    enable = true;
-    settings = {
-      DEVICES_TO_DISABLE_ON_STARTUP = "bluetooth";
-    };
-  };
+  services.tlp.enable = true;
 
   services.keyd = {
     enable = true;
