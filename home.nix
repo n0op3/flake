@@ -96,7 +96,7 @@
     configPath = "";
   };
 
-  services.kdeconnect.enable = true;
+  services.kdeconnect.enable = false;
 
   home.file.".local/share/icons/default" = {
     source = "${pkgs.bibata-cursors}/share/icons/Bibata-Modern-Ice/";
