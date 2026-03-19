@@ -92,6 +92,11 @@
     networkmanager = {
       enable = true;
       dns = "none";
+      ethernet.macAddress = "permanent";
+      wifi = {
+        macAddress = "permanent";
+        scanRandMacAddress = false;
+      };
     };
 
     nameservers = [
