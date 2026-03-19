@@ -17,7 +17,6 @@
     qmk-udev-rules
   ];
   services.tlp.enable = true;
-  powerManagement.powertop.enable = true;
 
   services.keyd = {
     enable = true;
