@@ -12,6 +12,21 @@
     ./modules/users.nix
   ];
 
+  nix.settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    substituters = [ "https://ezkea.cachix.org" ];
+    trusted-public-keys = [ "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" ];
+  };
+  nixpkgs.config.allowUnfree = true;
+
+  services.earlyoom = {
+    enable = true;
+    enableNotifications = true;
+  };
+
   services.udev.packages = with pkgs; [
     vial
     qmk-udev-rules
@@ -61,16 +76,6 @@
   programs.virt-manager.enable = true;
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
-
-  nix.settings = {
-    experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-    substituters = [ "https://ezkea.cachix.org" ];
-    trusted-public-keys = [ "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" ];
-  };
-  nixpkgs.config.allowUnfree = true;
 
   hardware.enableAllFirmware = true;
   hardware.bluetooth = {
