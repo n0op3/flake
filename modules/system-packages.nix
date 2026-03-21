@@ -4,6 +4,7 @@
     vim
     btop
     killall
+    wget
     clang
     gnumake
     lua51Packages.lua
