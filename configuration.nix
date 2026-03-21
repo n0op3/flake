@@ -22,9 +22,25 @@
   };
   nixpkgs.config.allowUnfree = true;
 
+  boot.kernel.sysctl = {
+    "kernel.sysrq" = 1;
+    "kernel.panic" = 10;
+    "kernel.panic_on_oops" = 1;
+  };
+
+  services.journald.extraConfig = ''
+    SystemMaxUse=1G
+    MaxRetentionSec=1week
+  '';
+
   services.earlyoom = {
     enable = true;
     enableNotifications = true;
+  };
+
+  services.openssh = {
+    enable = true;
+    settings.PasswordAuthentication = true;
   };
 
   services.udev.packages = with pkgs; [
