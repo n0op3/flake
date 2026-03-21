@@ -64,11 +64,16 @@
         arch = "x86_64-linux";
         hostname = "shinjuku";
       };
+      settings = rec {
+        username = "n0op3";
+        homeDirectory = "/home/${username}";
+      };
     in
     {
       nixosConfigurations.${system.hostname} = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit system;
+          inherit settings;
           inherit inputs;
           inherit mcsr-nixos;
         };
@@ -95,7 +100,7 @@
               inherit mcsr-nixos;
               inherit system;
             };
-            home-manager.users.n0op3 = {
+            home-manager.users.${settings.username} = {
               imports = [
                 ./home.nix
                 ./modules/hyprland.nix

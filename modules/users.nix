@@ -1,6 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, settings, ... }:
 {
-  users.users.n0op3 = {
+  users.users.${settings.username} = {
     isNormalUser = true;
     extraGroups = [
       "wheel"
