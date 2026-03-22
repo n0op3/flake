@@ -9,6 +9,9 @@
 
   home.packages = with pkgs; [
     inputs.nixpkgs-anki-patch.legacyPackages.${pkgs.stdenv.hostPlatform.system}.anki
+    unityhub
+    omnisharp-roslyn
+    dotnet-sdk
     libreoffice
     fastfetch
     git-credential-manager
