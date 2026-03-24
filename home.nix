@@ -12,6 +12,7 @@
     unityhub
     roslyn-ls
     dotnet-sdk
+    vscode
     libreoffice
     fastfetch
     git-credential-manager
