@@ -12,6 +12,7 @@
     unityhub
     roslyn-ls
     dotnetCorePackages.dotnet_9.sdk
+    gnome-clocks
     vscode
     libreoffice
     fastfetch
