@@ -11,7 +11,7 @@
     inputs.nixpkgs-anki-patch.legacyPackages.${pkgs.stdenv.hostPlatform.system}.anki
     unityhub
     roslyn-ls
-    dotnetCorePackages.sdk_10_0-bin
+    dotnetCorePackages.dotnet_9.sdk
     vscode
     libreoffice
     fastfetch
