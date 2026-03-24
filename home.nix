@@ -10,7 +10,7 @@
   home.packages = with pkgs; [
     inputs.nixpkgs-anki-patch.legacyPackages.${pkgs.stdenv.hostPlatform.system}.anki
     unityhub
-    omnisharp-roslyn
+    roslyn-ls
     dotnet-sdk
     libreoffice
     fastfetch
