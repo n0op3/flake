@@ -489,22 +489,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-anki-patch": {
-      "locked": {
-        "lastModified": 1772173633,
-        "narHash": "sha256-MOH58F4AIbCkh6qlQcwMycyk5SWvsqnS/TCfnqDlpj4=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "c0f3d81a7ddbc2b1332be0d8481a672b4f6004d6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "c0f3d81a7ddbc2b1332be0d8481a672b4f6004d6",
-        "type": "github"
-      }
-    },
     "nixpkgs-wine10": {
       "locked": {
         "lastModified": 1769986711,
@@ -613,7 +597,6 @@
         "millenium": "millenium",
         "musnix": "musnix",
         "nixpkgs": "nixpkgs_5",
-        "nixpkgs-anki-patch": "nixpkgs-anki-patch",
         "nixpkgs-wine10": "nixpkgs-wine10",
         "silentSDDM": "silentSDDM",
         "zen-browser": "zen-browser"

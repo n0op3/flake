@@ -8,7 +8,7 @@
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
-    inputs.nixpkgs-anki-patch.legacyPackages.${pkgs.stdenv.hostPlatform.system}.anki
+    anki
     unityhub
     roslyn-ls
     dotnetCorePackages.dotnet_9.sdk
