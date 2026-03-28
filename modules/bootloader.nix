@@ -15,19 +15,17 @@
     ];
 
     loader = {
-      grub = {
+      timeout = 0;
+
+      systemd-boot = {
         enable = true;
-        efiSupport = true;
-        device = "nodev";
-        splashImage = null;
-        configurationLimit = 16;
-        timeoutStyle = "hidden";
+        configurationLimit = 8;
       };
+
       efi = {
         canTouchEfiVariables = true;
         efiSysMountPoint = "/boot/efi";
       };
-      timeout = 0;
     };
 
     plymouth = {
