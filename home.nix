@@ -71,12 +71,14 @@
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
-  gtk = {
+  gtk = rec {
     enable = true;
     theme = {
       name = "adw-gtk3-dark";
       package = pkgs.adw-gtk3;
     };
+
+    gtk4.theme = theme;
   };
 
   catppuccin.kvantum = {
