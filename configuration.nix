@@ -19,6 +19,9 @@
     ];
     substituters = [ "https://ezkea.cachix.org" ];
     trusted-public-keys = [ "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" ];
+
+    cores = 2;
+    max-jobs = 5;
   };
   nixpkgs.config.allowUnfree = true;
 
