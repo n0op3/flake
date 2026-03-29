@@ -6,6 +6,7 @@
     hyprshutdown
     hyprpicker
     hyprsunset
+    swaylock
     waybar
     brightnessctl
     playerctl
