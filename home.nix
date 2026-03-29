@@ -9,14 +9,9 @@
 
   home.packages = with pkgs; [
     anki
-    unityhub
-    roslyn-ls
-    dotnetCorePackages.dotnet_9.sdk
     gnome-clocks
-    vscode
     libreoffice
     fastfetch
-    git-credential-manager
     vial
     qmk
     qmk-udev-rules
@@ -41,32 +36,14 @@
     networkmanager_dmenu
     dragon-drop
     ffmpeg
-    gimp
-    inkscape
     signal-desktop
     yt-dlp
     fd
-    just
-    go
-    gcc
-    bear
-    opencode
     thunar
     russ
     pamixer
-    python3
-    pkg-config
-    glrnvim
-    rustc
-    cargo
-    rustfmt
-    clippy
-    rust-analyzer
-    git-filter-repo
-    tokei
     qalculate-gtk
     nwg-look
-    vscode-extensions.vadimcn.vscode-lldb
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];

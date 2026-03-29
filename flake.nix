@@ -105,6 +105,9 @@
                 ./modules/hyprland.nix
                 ./modules/games.nix
                 ./modules/engineering.nix
+                ./modules/dev.nix
+                ./modules/gamedev.nix
+                ./modules/graphics-design.nix
                 catppuccin.homeModules.catppuccin
               ];
             };
