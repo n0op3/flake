@@ -11,6 +11,7 @@
     lmms
     yabridge
     yabridgectl
+    audacity
     (carla.override {
       withQt = true;
     })
