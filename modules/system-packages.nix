@@ -6,12 +6,6 @@
     btop
     killall
     wget
-    clang
-    gnumake
-    lua51Packages.lua
-    lua
-    luarocks
-    cargo
     fzf
     ripgrep
     lsd

@@ -5,6 +5,13 @@
     vscode-extensions.vadimcn.vscode-lldb
     git-credential-manager
     git-filter-repo
+    clang
+    cmake
+    gnumake
+    lua51Packages.lua
+    lua
+    luarocks
+    cargo
     just
     go
     gcc
