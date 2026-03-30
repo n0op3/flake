@@ -9,12 +9,10 @@
     cmake
     gnumake
     lua51Packages.lua
-    lua
     luarocks
     cargo
     just
     go
-    gcc
     bear
     opencode
     python3
