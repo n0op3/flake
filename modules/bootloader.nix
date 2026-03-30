@@ -26,6 +26,8 @@
         enable = true;
         efiSupport = true;
         device = "nodev";
+        timeoutStyle = "hidden";
+        splashImage = null;
       };
 
       efi = {
