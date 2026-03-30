@@ -17,9 +17,15 @@
     loader = {
       timeout = 0;
 
-      systemd-boot = {
+      # systemd-boot = {
+      #   enable = true;
+      #   configurationLimit = 8;
+      # };
+
+      grub = {
         enable = true;
-        configurationLimit = 8;
+        efiSupport = true;
+        device = "nodev";
       };
 
       efi = {
