@@ -52,6 +52,11 @@
   ];
   services.tlp.enable = true;
 
+  services.udisks2 = {
+    enable = true;
+    mountOnMedia = true;
+  };
+
   services.keyd = {
     enable = true;
     keyboards = {
