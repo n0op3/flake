@@ -14,6 +14,6 @@
     "s" = "nix search nixpkgs";
     "rm" = "trash";
     "del" = "/run/current-system/sw/bin/rm";
-    "dv" = "nix develop";
+    "dv" = "nix develop -c $SHELL";
   };
 }
