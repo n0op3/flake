@@ -11,6 +11,7 @@
     lua51Packages.lua
     luarocks
     cargo
+    cargo-binstall
     just
     go
     bear
@@ -19,7 +20,6 @@
     pkg-config
     glrnvim
     rustc
-    cargo
     rustfmt
     clippy
     rust-analyzer
