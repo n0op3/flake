@@ -27,5 +27,6 @@
     jdk21
     vulkan-tools
     vulkan-loader
+    powertop
   ];
 }
