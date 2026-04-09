@@ -28,5 +28,6 @@
     vulkan-tools
     vulkan-loader
     powertop
+    cachix
   ];
 }
