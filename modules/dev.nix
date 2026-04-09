@@ -10,8 +10,6 @@
     gnumake
     lua51Packages.lua
     luarocks
-    cargo
-    cargo-binstall
     just
     go
     bear
@@ -19,10 +17,8 @@
     python3
     pkg-config
     glrnvim
-    rustc
-    rustfmt
-    clippy
-    rust-analyzer
+    rustup
+    cargo-binstall
     tokei
   ];
 }
