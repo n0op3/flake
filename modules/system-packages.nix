@@ -23,6 +23,7 @@
     nettools
     tree
     man-pages
+    tldr
     zip
     jdk21
     vulkan-tools
