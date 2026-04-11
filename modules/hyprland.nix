@@ -15,7 +15,7 @@
     rofi-power-menu
     unipicker
     pwvucontrol
-    swww
+    awww
     swaynotificationcenter
   ];
 }
