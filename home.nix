@@ -40,6 +40,7 @@
     yt-dlp
     fd
     thunar
+    thunar-archive-plugin
     russ
     pamixer
     qalculate-gtk
