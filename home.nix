@@ -16,8 +16,6 @@
     qmk
     qmk-udev-rules
     mpv
-    vesktop
-    discord-canary
     stow
     starship
     kitty
@@ -36,7 +34,6 @@
     networkmanager_dmenu
     dragon-drop
     ffmpeg
-    signal-desktop
     yt-dlp
     fd
     thunar

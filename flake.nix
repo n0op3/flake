@@ -109,6 +109,7 @@
                 ./modules/gamedev.nix
                 ./modules/graphics-design.nix
                 ./modules/osint.nix
+                ./modules/messengers.nix
                 catppuccin.homeModules.catppuccin
               ];
             };
