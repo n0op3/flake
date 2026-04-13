@@ -27,7 +27,13 @@
     cores = 2;
     max-jobs = 5;
   };
-  nixpkgs.config.allowUnfree = true;
+
+  nixpkgs.config = {
+    allowUnfree = true;
+    permittedInsecurePackages = [
+      "googleearth-pro-7.3.6.10201"
+    ];
+  };
 
   boot.kernel.sysctl = {
     "kernel.sysrq" = 1;
