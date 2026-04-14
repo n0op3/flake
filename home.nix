@@ -35,6 +35,8 @@
     dragon-drop
     ffmpeg
     yt-dlp
+    ani-cli
+    ytfzf
     fd
     thunar
     thunar-archive-plugin
