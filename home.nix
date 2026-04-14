@@ -43,6 +43,7 @@
     qalculate-gtk
     nwg-look
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    tor-browser
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
