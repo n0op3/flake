@@ -157,6 +157,11 @@
           from = 1714;
           to = 1764;
         }
+        {
+          # SimpleX Chat
+          from = 30000;
+          to = 65535;
+        }
       ];
 
       allowedUDPPortRanges = allowedTCPPortRanges;
