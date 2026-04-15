@@ -22,7 +22,6 @@
     pywal16
     bibata-cursors
     papirus-icon-theme
-    pywalfox-native
     tidal-hifi
     cava
     grimblast
