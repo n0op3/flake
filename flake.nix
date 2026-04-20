@@ -110,6 +110,7 @@
                 ./modules/graphics-design.nix
                 ./modules/osint.nix
                 ./modules/messengers.nix
+                ./modules/home-manager/opencode-workaround.nix
                 catppuccin.homeModules.catppuccin
               ];
             };
