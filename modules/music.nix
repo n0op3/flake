@@ -9,6 +9,7 @@
 
   environment.systemPackages = with pkgs; [
     lmms
+    vital
     yabridge
     yabridgectl
     audacity

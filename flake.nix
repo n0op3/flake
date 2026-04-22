@@ -80,6 +80,7 @@
           ./configuration.nix
           ./modules/mcsr/waywall.nix
           ./modules/music.nix
+          ./modules/opentabletdriver.nix
           catppuccin.nixosModules.catppuccin
           silentSDDM.nixosModules.default
           mcsr-nixos.nixosModules.waywall
