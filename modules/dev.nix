@@ -20,5 +20,6 @@
     rustup
     cargo-binstall
     tokei
+    silicon
   ];
 }
