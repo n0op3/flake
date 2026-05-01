@@ -4,5 +4,6 @@
     gimp
     inkscape
     fontforge-gtk
+    krita
   ];
 }
