@@ -24,6 +24,7 @@
     papirus-icon-theme
     tidal-hifi
     cava
+    scrcpy
     grimblast
     satty
     eog
