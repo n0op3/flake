@@ -10,6 +10,7 @@
     ./modules/graphical-env.nix
     ./modules/shell.nix
     ./modules/users.nix
+    ./modules/sunshine.nix
   ];
 
   nix.settings = {
@@ -147,7 +148,7 @@
     ];
 
     firewall = rec {
-      enable = true;
+      enable = false;
       checkReversePath = "loose";
 
       # Yeelight Station
