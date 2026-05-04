@@ -9,6 +9,7 @@
     ./modules/logind.nix
     ./modules/graphical-env.nix
     ./modules/shell.nix
+    ./modules/virtualization.nix
     ./modules/users.nix
     ./modules/sunshine.nix
   ];
@@ -33,6 +34,7 @@
     allowUnfree = true;
     permittedInsecurePackages = [
       "googleearth-pro-7.3.6.10201"
+      "openssl-1.1.1w"
     ];
   };
 
@@ -107,14 +109,6 @@
   };
 
   services.flatpak.enable = true;
-
-  programs.virt-manager.enable = true;
-  virtualisation.spiceUSBRedirection.enable = true;
-  virtualisation.libvirtd = {
-    enable = true;
-    onBoot = "ignore";
-  };
-  systemd.services.libvirt-guests.enable = false;
 
   hardware.enableAllFirmware = true;
   hardware.bluetooth = {

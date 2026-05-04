@@ -1,0 +1,18 @@
+{ pkgs, ... }:
+{
+  programs.virt-manager.enable = true;
+  systemd.services.libvirt-guests.enable = false;
+  virtualisation.spiceUSBRedirection.enable = true;
+
+  virtualisation.libvirtd = {
+    enable = true;
+    onBoot = "ignore";
+  };
+
+  virtualisation.podman.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    podman-compose
+    winboat
+  ];
+}
