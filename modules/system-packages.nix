@@ -1,11 +1,11 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    (btop.override { cudaSupport = true; })
     usermount
     util-linux
     file
     vim
-    btop
     killall
     wget
     fzf
