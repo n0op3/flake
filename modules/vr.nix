@@ -11,6 +11,7 @@
       '';
     })
     alvr
+    android-tools
   ];
 
   hardware.nvidia = {
