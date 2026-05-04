@@ -159,6 +159,11 @@
           from = 30000;
           to = 65535;
         }
+        {
+          # ALVR
+          from = 9943;
+          to = 9944;
+        }
       ];
 
       allowedUDPPortRanges = allowedTCPPortRanges;
