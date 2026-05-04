@@ -10,6 +10,7 @@
           --prefix LD_LIBRARY_PATH : /run/opengl-driver/lib
       '';
     })
+    alvr
   ];
 
   hardware.nvidia = {

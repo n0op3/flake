@@ -11,7 +11,7 @@
     ./modules/shell.nix
     ./modules/virtualization.nix
     ./modules/users.nix
-    ./modules/sunshine.nix
+    ./modules/vr.nix
   ];
 
   nix.settings = {
