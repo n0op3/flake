@@ -94,6 +94,8 @@
     };
   };
 
+  services.envfs.enable = true;
+
   services.locate = {
     enable = true;
     interval = "never";
