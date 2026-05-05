@@ -10,13 +10,12 @@
           --prefix LD_LIBRARY_PATH : /run/opengl-driver/lib
       '';
     })
-    alvr
     android-tools
   ];
 
-  hardware.nvidia = {
-    modesetting.enable = true;
-    open = false;
+  programs.alvr = {
+    enable = true;
+    openFirewall = true;
   };
 
   hardware.graphics.enable = true;

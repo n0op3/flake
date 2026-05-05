@@ -6,6 +6,7 @@
     lutris-unwrapped
     heroic
     millennium-steam
+    steam-run
     gamemode
     prismlauncher
     smassh

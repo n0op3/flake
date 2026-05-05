@@ -5,10 +5,12 @@
     extraGroups = [
       "wheel"
       "video"
+      "render"
       "audio"
       "input"
       "libvirtd"
       "wireshark"
+      "avahi"
     ];
     shell = pkgs.zsh;
   };
