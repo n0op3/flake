@@ -60,6 +60,8 @@
     "nvidia"
   ];
 
+  powerManagement.cpuFreqGovernor = lib.mkForce "powersave";
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
