@@ -30,5 +30,6 @@
     vulkan-loader
     powertop
     cachix
+    nix-ld
   ];
 }
