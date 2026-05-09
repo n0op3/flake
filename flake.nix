@@ -5,7 +5,7 @@
     musnix.url = "github:musnix/musnix";
 
     home-manager = {
-      url = "github:nix-community/home-manager/f2d3e04e278422c7379e067e323734f3e8c585a7";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -90,6 +90,7 @@
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = {
               inherit inputs;
+              inherit settings;
               inherit mcsr-nixos;
               inherit system;
             };

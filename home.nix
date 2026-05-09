@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  settings,
   ...
 }:
 
@@ -75,10 +76,10 @@
     QT_QPA_PLATFORMTHEME = "kvantum";
   };
 
+  home.file."/home/${settings.username}/.config/rofi/config.rasi".enable = false;
   programs.rofi = {
     enable = true;
     plugins = [ pkgs.rofi-emoji ];
-    configPath = "";
   };
 
   services.kdeconnect.enable = false;
