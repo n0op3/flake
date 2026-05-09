@@ -24,11 +24,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    silentSDDM = {
-      url = "github:uiriansan/SilentSDDM";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     mcsr-nixos = {
       url = "https://git.uku3lig.net/uku/mcsr-nixos/archive/main.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -53,7 +48,6 @@
       zen-browser,
       blender-bin,
       catppuccin,
-      silentSDDM,
       mcsr-nixos,
       aagl,
       ...
@@ -82,7 +76,6 @@
           ./modules/music.nix
           ./modules/opentabletdriver.nix
           catppuccin.nixosModules.catppuccin
-          silentSDDM.nixosModules.default
           mcsr-nixos.nixosModules.waywall
           {
             imports = [ aagl.nixosModules.default ];
