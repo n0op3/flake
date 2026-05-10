@@ -1,10 +1,16 @@
-{ pkgs, inputs, ... }:
+{ inputs, pkgs, ... }:
 {
-  programs.hyprland = {
+  environment.pathsToLink = [
+    "/share/applications"
+    "/share/xdg-desktop-portal"
+  ];
+
+  xdg.portal = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    portalPackage =
-      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    config.common.default = "*";
+    extraPortals = with inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}; [
+      xdg-desktop-portal-hyprland
+    ];
   };
 
   environment.systemPackages = with pkgs; [
@@ -14,10 +20,14 @@
   fonts = {
     fontconfig = {
       enable = true;
-      defaultFonts.monospace = [
-        "JetBrainsMono"
-        "Noto Sans Mono"
-      ];
+      defaultFonts = rec {
+        monospace = [
+          "JetBrainsMono"
+          "Noto Sans Mono"
+        ];
+        serif = monospace;
+        sansSerif = monospace;
+      };
       antialias = true;
       hinting.enable = true;
       hinting.style = "slight";
