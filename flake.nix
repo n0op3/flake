@@ -71,6 +71,7 @@
           inherit mcsr-nixos;
         };
         modules = [
+          ./cachix.nix
           ./configuration.nix
           ./modules/mcsr/waywall.nix
           ./modules/music.nix
