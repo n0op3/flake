@@ -93,6 +93,8 @@
     };
   };
 
+  services.pipewire.enable = true;
+
   services.envfs.enable = true;
 
   services.locate = {
