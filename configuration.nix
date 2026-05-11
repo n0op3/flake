@@ -145,7 +145,7 @@
     ];
 
     firewall = rec {
-      enable = false;
+      enable = true;
       checkReversePath = "loose";
 
       # Yeelight Station
