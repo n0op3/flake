@@ -12,6 +12,7 @@
     luarocks
     just
     go
+    jq
     bear
     opencode
     python3
