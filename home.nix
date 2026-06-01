@@ -44,6 +44,8 @@
     russ
     pamixer
     qalculate-gtk
+    pywalfox-native
+    firefoxpwa
     nwg-look
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     ungoogled-chromium
