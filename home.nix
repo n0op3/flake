@@ -61,6 +61,9 @@
     gtk4.theme = theme;
   };
 
+  catppuccin.enable = true;
+  catppuccin.autoEnable = false;
+
   catppuccin.kvantum = {
     enable = true;
     apply = true;

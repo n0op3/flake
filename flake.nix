@@ -77,6 +77,10 @@
           ./modules/music.nix
           ./modules/opentabletdriver.nix
           catppuccin.nixosModules.catppuccin
+          {
+            catppuccin.enable = true;
+            catppuccin.autoEnable = false;
+          }
           musnix.nixosModules.musnix
           mcsr-nixos.nixosModules.waywall
           {
