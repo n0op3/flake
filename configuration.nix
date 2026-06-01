@@ -166,8 +166,14 @@
       enable = true;
       checkReversePath = "loose";
 
-      # Yeelight Station
-      allowedUDPPorts = [ 1982 ];
+      # Minecraft
+      allowedTCPPorts = [ 25565 ];
+
+      # Yeelight Station, Minecraft
+      allowedUDPPorts = [
+        1982
+        25565
+      ];
 
       allowedTCPPortRanges = [
         {
