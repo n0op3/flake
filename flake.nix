@@ -72,6 +72,7 @@
         };
         modules = [
           ./cachix.nix
+          ./modules/cleanup.nix
           ./configuration.nix
           ./modules/mcsr/waywall.nix
           ./modules/music.nix
