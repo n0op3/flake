@@ -22,7 +22,6 @@
     kitty
     pywal16
     bibata-cursors
-    papirus-icon-theme
     tidal-hifi
     cava
     scrcpy
@@ -38,9 +37,9 @@
     yt-dlp
     ani-cli
     ytfzf
+    file-roller
+    ffmpegthumbnailer
     fd
-    thunar
-    thunar-archive-plugin
     russ
     pamixer
     qalculate-gtk
@@ -64,7 +63,6 @@
   };
 
   catppuccin.enable = true;
-  catppuccin.autoEnable = false;
 
   catppuccin.kvantum = {
     enable = true;
