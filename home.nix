@@ -50,6 +50,7 @@
     ungoogled-chromium
     tor-browser
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
+    activitywatch
   ];
 
   gtk = rec {
