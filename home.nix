@@ -50,19 +50,13 @@
     ungoogled-chromium
     tor-browser
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
-    # aw-qt
+    aw-qt
     aw-watcher-window-wayland
-    # aw-watcher-afk
-    # awatcher
   ];
 
   services.activitywatch = {
     enable = true;
-    watchers = with pkgs; {
-      aw-watcher-window-wayland.package = aw-watcher-window-wayland;
-      # aw-watcher-afk.package = aw-watcher-afk;
-      # awatcher.package = awatcher;
-    };
+    watchers.aw-watcher-window-wayland.package = pkgs.aw-watcher-window-wayland;
   };
 
   gtk = rec {
