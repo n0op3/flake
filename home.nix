@@ -51,12 +51,13 @@
     tor-browser
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
     aw-qt
-    aw-watcher-window-wayland
+    awatcher
   ];
 
   services.activitywatch = {
     enable = true;
-    watchers.aw-watcher-window-wayland.package = pkgs.aw-watcher-window-wayland;
+    # watchers.aw-watcher-window-wayland.package = pkgs.aw-watcher-window-wayland;
+    watchers.awatcher.package = pkgs.awatcher;
   };
 
   gtk = rec {
