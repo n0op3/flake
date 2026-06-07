@@ -8,7 +8,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    lmms
+    lmms-full
     vital
     yabridge
     yabridgectl
