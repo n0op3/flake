@@ -41,6 +41,8 @@
     "kernel.sysrq" = 1;
     "kernel.panic" = 10;
     "kernel.panic_on_oops" = 1;
+    "fs.inotify.max_user_watches" = 524288;
+    "fs.inotify.max_user_instances" = 1024;
   };
 
   services.journald.extraConfig = ''

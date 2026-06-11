@@ -15,6 +15,8 @@
     shell = pkgs.zsh;
   };
 
+  programs.wireshark.enable = true;
+
   environment.systemPackages = with pkgs; [
     libsForQt5.qt5ct
     qt6Packages.qt6ct
