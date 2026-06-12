@@ -22,5 +22,6 @@
     cargo-binstall
     tokei
     silicon
+    rpi-imager
   ];
 }
