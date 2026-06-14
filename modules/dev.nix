@@ -18,11 +18,7 @@
     python3
     pkg-config
     glrnvim
-    rustc
-    cargo
-    rust-analyzer
-    rustfmt
-    clippy
+    rustup
     cargo-binstall
     tokei
     silicon
