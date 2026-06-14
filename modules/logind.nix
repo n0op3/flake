@@ -30,7 +30,7 @@
       autoColor = true;
       fontFamily = "JetBrains Mono";
       fontSize = 13;
+      use24HourClock = true;
     })
   ];
-
 }
