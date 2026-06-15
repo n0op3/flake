@@ -7,7 +7,6 @@
     catppuccin.url = "github:catppuccin/nix";
     millenium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
     hyprland.url = "github:hyprwm/Hyprland";
-    pixie-sddm.url = "github:xCaptaiN09/pixie-sddm";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
