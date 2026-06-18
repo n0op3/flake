@@ -23,5 +23,6 @@
     tokei
     silicon
     rpi-imager
+    cloudflared
   ];
 }
