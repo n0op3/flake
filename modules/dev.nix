@@ -25,6 +25,7 @@
     rpi-imager
     cloudflared
     syncthing
+    github-cli
   ];
 
   services.syncthing.enable = true;
