@@ -24,5 +24,8 @@
     silicon
     rpi-imager
     cloudflared
+    syncthing
   ];
+
+  services.syncthing.enable = true;
 }
