@@ -52,6 +52,7 @@
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
     aw-qt
     awatcher
+    libinput-gestures
   ];
 
   services.activitywatch = {
