@@ -11,6 +11,7 @@
       "libvirtd"
       "wireshark"
       "avahi"
+      "networkmanager"
     ];
     shell = pkgs.zsh;
   };
