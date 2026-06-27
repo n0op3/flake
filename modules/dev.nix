@@ -6,6 +6,9 @@
     git-credential-manager
     git-filter-repo
     clang
+    clang-tools
+    bear
+    gdb
     cmake
     gnumake
     lua51Packages.lua
@@ -13,7 +16,6 @@
     just
     go
     jq
-    bear
     opencode
     python3
     pkg-config
