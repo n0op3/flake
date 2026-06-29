@@ -29,6 +29,4 @@
     syncthing
     github-cli
   ];
-
-  services.syncthing.enable = true;
 }
