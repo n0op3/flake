@@ -31,5 +31,6 @@
     powertop
     cachix
     nix-ld
+    bandwhich
   ];
 }

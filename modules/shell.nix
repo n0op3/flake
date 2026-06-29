@@ -16,5 +16,6 @@
     "del" = "/run/current-system/sw/bin/rm";
     "dv" = "nix develop -c $SHELL";
     "dvi" = "nix develop --impure -c $SHELL";
+    "bandwhich" = "sudo bandwhich";
   };
 }
