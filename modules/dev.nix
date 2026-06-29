@@ -28,5 +28,6 @@
     cloudflared
     syncthing
     github-cli
+    nodejs
   ];
 }
