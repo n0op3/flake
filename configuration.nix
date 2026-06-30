@@ -104,9 +104,9 @@
             j = "down";
             k = "up";
             l = "right";
-            s = "prevsong";
-            d = "playpause";
-            f = "nextsong";
+            a = "volumeup";
+            z = "volumedown";
+            x = "mute";
           };
         };
       };
