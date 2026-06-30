@@ -10,6 +10,7 @@
     hyprshutdown
     hyprpicker
     hyprsunset
+    hyprpolkitagent
     swaylock
     waybar
     brightnessctl
