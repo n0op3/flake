@@ -22,7 +22,6 @@
     kitty
     pywal16
     bibata-cursors
-    tidal-hifi
     cava
     scrcpy
     grimblast
@@ -53,6 +52,7 @@
     aw-qt
     awatcher
     libinput-gestures
+    sone
   ];
 
   services.activitywatch = {
