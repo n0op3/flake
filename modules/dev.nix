@@ -1,33 +1,41 @@
 { pkgs, ... }:
 {
+  imports = [
+    ./webdev.nix
+  ];
+
   home.packages = with pkgs; [
+    # Additional editors
     vscode
     vscode-extensions.vadimcn.vscode-lldb
-    git-credential-manager
-    git-filter-repo
+    glrnvim
+
+    # Toolchains
     clang
     clang-tools
-    bear
-    gdb
     cmake
     gnumake
     lua51Packages.lua
     luarocks
-    just
     go
-    jq
-    opencode
     python3
-    pkg-config
-    glrnvim
     rustup
     cargo-binstall
+
+    # Utilities
+    git-credential-manager
+    git-filter-repo
+    github-cli
+    bear
+    gdb
+    just
+    jq
+    opencode
+    pkg-config
     tokei
     silicon
     rpi-imager
     cloudflared
     syncthing
-    github-cli
-    nodejs
   ];
 }
