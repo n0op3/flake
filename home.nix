@@ -53,6 +53,7 @@
     awatcher
     libinput-gestures
     sone
+    seahorse
   ];
 
   services.activitywatch = {
