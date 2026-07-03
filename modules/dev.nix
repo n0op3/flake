@@ -38,4 +38,23 @@
     cloudflared
     syncthing
   ];
+
+  programs.jujutsu.enable = true;
+  programs.git = {
+    enable = true;
+    settings = {
+      init.defaultBranch = "main";
+      pull.rebase = true;
+
+      credential = {
+        helper = "store";
+        credentialStore = "gpg";
+      };
+
+      user = {
+        name = "n0op3";
+        email = "n0op3@proton.me";
+      };
+    };
+  };
 }
