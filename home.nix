@@ -19,6 +19,7 @@
     mpv
     stow
     starship
+    jj-starship
     kitty
     pywal16
     bibata-cursors
