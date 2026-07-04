@@ -37,7 +37,7 @@
     };
 
     plymouth = {
-      enable = true;
+      enable = false;
       theme = "mac-style";
       themePackages = [ pkgs.mac-style-plymouth ];
     };

@@ -7,6 +7,7 @@
     catppuccin.url = "github:catppuccin/nix";
     millenium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
     hyprland.url = "github:hyprwm/Hyprland";
+    concord.url = "github:chojs23/concord";
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
