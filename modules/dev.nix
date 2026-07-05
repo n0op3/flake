@@ -19,8 +19,14 @@
     luarocks
     go
     python3
+
+    # Rust
     rustup
+    bacon
+    cargo-audit
+    cargo-nextest
     cargo-binstall
+    cargo-tarpaulin
 
     # Utilities
     git-credential-manager
