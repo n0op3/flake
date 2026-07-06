@@ -15,8 +15,8 @@
   ];
 
   nix.settings = {
-    cores = 2;
-    max-jobs = 5;
+    cores = 10;
+    max-jobs = "auto";
 
     experimental-features = [
       "nix-command"
