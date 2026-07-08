@@ -55,6 +55,7 @@
     libinput-gestures
     sone
     seahorse
+    tuxedo
   ];
 
   services.activitywatch = {
