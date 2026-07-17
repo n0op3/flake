@@ -35,6 +35,7 @@
     bear
     gdb
     just
+    perf
     jq
     opencode
     pkg-config
