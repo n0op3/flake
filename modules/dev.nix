@@ -36,6 +36,7 @@
     gdb
     just
     perf
+    hotspot
     jq
     opencode
     pkg-config
