@@ -35,6 +35,7 @@
       "googleearth-pro-7.3.7.1155"
       "openssl-1.1.1w"
       "pnpm-10.29.2"
+      "electron-40.10.5"
     ];
   };
 
