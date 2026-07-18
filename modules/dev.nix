@@ -23,6 +23,7 @@
     # Rust
     rustup
     bacon
+    cargo-xwin
     cargo-audit
     cargo-nextest
     cargo-binstall
