@@ -54,6 +54,7 @@
     awatcher
     libinput-gestures
     sone
+    inputs.hiresTi.packages.${pkgs.stdenv.hostPlatform.system}.default
     seahorse
     tuxedo
   ];

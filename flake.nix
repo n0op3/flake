@@ -8,6 +8,7 @@
     millenium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
     hyprland.url = "github:hyprwm/Hyprland";
     concord.url = "github:chojs23/concord";
+    hiresTi.url = "github:yelanxin/hiresTI";
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
