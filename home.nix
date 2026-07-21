@@ -57,6 +57,7 @@
     inputs.hiresTi.packages.${pkgs.stdenv.hostPlatform.system}.default
     seahorse
     tuxedo
+    ydotool
   ];
 
   services.activitywatch = {

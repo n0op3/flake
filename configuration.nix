@@ -140,6 +140,8 @@
 
   services.flatpak.enable = true;
 
+  hardware.uinput.enable = true;
+
   hardware.enableAllFirmware = true;
   hardware.bluetooth = {
     enable = true;

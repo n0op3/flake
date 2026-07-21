@@ -8,6 +8,7 @@
       "render"
       "audio"
       "input"
+      "uinput"
       "libvirtd"
       "wireshark"
       "avahi"
