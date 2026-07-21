@@ -46,6 +46,7 @@
     rpi-imager
     cloudflared
     syncthing
+    litecli
   ];
 
   programs.jujutsu.enable = true;
