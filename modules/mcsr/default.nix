@@ -1,7 +1,7 @@
 {
   lib,
-  config,
   osConfig,
+  nihonConfig,
   pkgs,
   mcsr-nixos,
   ...
@@ -10,7 +10,7 @@ let
   mcsrPkgs = mcsr-nixos.packages.${pkgs.stdenv.hostPlatform.system};
 in
 {
-  config = lib.mkIf config.nihonConfig.gaming.enable {
+  config = lib.mkIf nihonConfig.gaming.enable {
     xdg.configFile."waywall/init.lua".source = osConfig.programs.waywall.config.finalFile;
     xdg.configFile."waywall/measuring_overlay.png".source = ./resources/measuring_overlay.png;
 

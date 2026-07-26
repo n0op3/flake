@@ -1,13 +1,13 @@
 {
   pkgs,
   lib,
-  config,
+  nihonConfig,
   ...
 }:
 {
   imports = [ ./mcsr/default.nix ];
 
-  config = lib.mkIf config.nihonConfig.gaming.enable {
+  config = lib.mkIf nihonConfig.gaming.enable {
     home.packages = with pkgs; [
       lutris-unwrapped
       heroic

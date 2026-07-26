@@ -1,4 +1,8 @@
-{ pkgs, system, ... }:
+{
+  pkgs,
+  system,
+  ...
+}:
 {
   system.stateVersion = "25.11";
 
@@ -13,6 +17,10 @@
     ./modules/users.nix
     ./modules/vr.nix
   ];
+
+  nihonConfig = {
+    gaming.enable = true;
+  };
 
   nix.settings = {
     cores = 10;

@@ -109,7 +109,6 @@
               home-manager.users.${settings.username} = {
                 imports = [
                   ./home.nix
-                  ./modules/options.nix
                   ./modules/hyprland.nix
                   ./modules/games.nix
                   ./modules/engineering.nix
