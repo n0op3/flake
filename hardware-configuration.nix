@@ -20,6 +20,13 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
+  hardware.enableAllFirmware = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = false;
+  };
+  services.blueman.enable = true;
+
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/9bf5522b-489a-40a9-a859-c908c41f9ad7";
     fsType = "ext4";
@@ -77,18 +84,16 @@
     powerManagement.finegrained = false;
     open = true;
     nvidiaSettings = true;
-  };
-
-  hardware.nvidia.prime = {
-    offload.enable = true;
-    intelBusId = "PCI:0:2:0";
-    nvidiaBusId = "PCI:1:0:0";
+    prime = {
+      offload.enable = true;
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
   };
 
   boot.extraModprobeConfig = ''
     options nvidia_modeset vblank_sem_control=0
   '';
 
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

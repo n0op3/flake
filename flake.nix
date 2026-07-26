@@ -81,7 +81,6 @@
           ./configuration.nix
           ./modules/mcsr/waywall.nix
           ./modules/music.nix
-          ./modules/opentabletdriver.nix
           catppuccin.nixosModules.catppuccin
           musnix.nixosModules.musnix
           mcsr-nixos.nixosModules.waywall

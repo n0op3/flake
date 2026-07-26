@@ -1,13 +1,16 @@
 {
   pkgs,
-  system,
   ...
 }:
 {
   system.stateVersion = "25.11";
 
   imports = [
+    ./nix-settings.nix
     ./hardware-configuration.nix
+    ./kernel.nix
+    ./network.nix
+    ./input.nix
     ./modules/bootloader.nix
     ./modules/system-packages.nix
     ./modules/logind.nix
@@ -20,37 +23,6 @@
 
   nihonConfig = {
     gaming.enable = true;
-  };
-
-  nix.settings = {
-    cores = 10;
-    max-jobs = "auto";
-
-    experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-
-    trusted-users = [
-      "root"
-      "@wheel"
-    ];
-  };
-
-  nixpkgs.config = {
-    allowUnfree = true;
-    permittedInsecurePackages = [
-      "googleearth-pro-7.3.7.1155"
-      "openssl-1.1.1w"
-      "pnpm-10.29.2"
-      "electron-40.10.5"
-    ];
-  };
-
-  boot.kernel.sysctl = {
-    "kernel.sysrq" = 1;
-    "kernel.panic" = 10;
-    "kernel.panic_on_oops" = 1;
   };
 
   services.journald.extraConfig = ''
@@ -82,7 +54,7 @@
       CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
 
       CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+      CPU_ENERGY_PERF_POLICY_ON_AC = "powersave";
 
       CPU_MIN_PERF_ON_AC = 0;
       CPU_MAX_PERF_ON_AC = 100;
@@ -97,30 +69,6 @@
   services.udisks2 = {
     enable = true;
     mountOnMedia = true;
-  };
-
-  services.keyd = {
-    enable = true;
-    keyboards = {
-      laptop = {
-        ids = [ "048d:c100:5d4326cd" ];
-        settings = {
-          main = {
-            capslock = "overload(meta, esc)";
-            esc = "capslock";
-          };
-          alt = {
-            h = "left";
-            j = "down";
-            k = "up";
-            l = "right";
-            a = "volumeup";
-            z = "volumedown";
-            x = "mute";
-          };
-        };
-      };
-    };
   };
 
   services.gnome.gnome-keyring.enable = true;
@@ -148,75 +96,6 @@
 
   services.flatpak.enable = true;
 
-  hardware.uinput.enable = true;
-
-  hardware.enableAllFirmware = true;
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = false;
-  };
-  services.blueman.enable = true;
-
-  boot.extraModprobeConfig = ''
-    options iwlwifi power_save=0 power_level=0
-    options iwlmvm power_scheme=1
-    options iwlmvm bt_coex_active=1
-  '';
-
-  systemd.services.NetworkManager-wait-online.enable = false;
-  networking = {
-    hostName = "${system.hostname}";
-
-    networkmanager = {
-      enable = true;
-      dns = "none";
-      ethernet.macAddress = "permanent";
-      wifi = {
-        macAddress = "permanent";
-        scanRandMacAddress = false;
-      };
-    };
-
-    nameservers = [
-      "1.1.1.1"
-      "8.8.8.8"
-    ];
-
-    firewall = rec {
-      enable = true;
-      checkReversePath = "loose";
-
-      # Minecraft
-      allowedTCPPorts = [ 25565 ];
-
-      # Yeelight Station, Minecraft
-      allowedUDPPorts = [
-        1982
-        25565
-      ];
-
-      allowedTCPPortRanges = [
-        {
-          # KDE Connect
-          from = 1714;
-          to = 1764;
-        }
-        {
-          # SimpleX Chat
-          from = 30000;
-          to = 65535;
-        }
-        {
-          # ALVR
-          from = 9943;
-          to = 9944;
-        }
-      ];
-
-      allowedUDPPortRanges = allowedTCPPortRanges;
-    };
-  };
-
   time.timeZone = "Europe/Warsaw";
 
   programs.obs-studio = {
@@ -234,10 +113,4 @@
     enable = true;
     binfmt = true; # Allow running AppImages just by supplying their path
   };
-
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = [
-    # Any missing dynamic libraries for unpackaged programs
-    # go here, NOT in environment.systemPackages
-  ];
 }
