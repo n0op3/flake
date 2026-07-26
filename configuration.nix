@@ -2,9 +2,9 @@
   system.stateVersion = "25.11";
 
   imports = [
-    ./modules/nix
-    ./hardware-configuration.nix
     ./system.nix
+    ./modules/nix
+    ./modules/hardware
     ./modules/users.nix
     ./modules/network.nix
     ./modules/input.nix
