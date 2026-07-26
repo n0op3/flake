@@ -11,7 +11,6 @@
   imports = [
     ./modules/domains/home.nix
     ./modules/desktop/home.nix
-    inputs.catppuccin.homeModules.catppuccin
   ];
 
   home.packages = with pkgs; [
@@ -79,15 +78,6 @@
     };
 
     gtk4.theme = theme;
-  };
-
-  catppuccin.enable = true;
-
-  catppuccin.kvantum = {
-    enable = true;
-    apply = true;
-    accent = "lavender";
-    flavor = "mocha";
   };
 
   qt = {
