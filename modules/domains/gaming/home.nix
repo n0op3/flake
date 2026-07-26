@@ -5,7 +5,7 @@
   ...
 }:
 {
-  imports = [ ./mcsr/default.nix ];
+  imports = [ ./mcsr/home.nix ];
 
   config = lib.mkIf nihonConfig.gaming.enable {
     home.packages = with pkgs; [

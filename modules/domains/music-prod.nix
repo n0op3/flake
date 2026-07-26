@@ -1,5 +1,7 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
+  imports = [ inputs.musnix.nixosModules.musnix ];
+
   musnix.enable = true;
 
   services.pipewire.alsa = {

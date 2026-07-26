@@ -77,17 +77,18 @@
         modules = [
           ./modules/options.nix
           ./cachix.nix
-          ./modules/cleanup.nix
           ./configuration.nix
-          ./modules/mcsr/waywall.nix
-          ./modules/music.nix
+          ./modules/cleanup.nix
+          ./modules/domains/system.nix
+          ./modules/desktop/system.nix
+
           catppuccin.nixosModules.catppuccin
-          musnix.nixosModules.musnix
-          mcsr-nixos.nixosModules.waywall
+
           {
-            imports = [ aagl.nixosModules.default ];
-            nix.settings = aagl.nixConfig;
-            programs.anime-game-launcher.enable = true;
+            nixpkgs.overlays = with inputs; [
+              mac-style-plymouth.overlays.default
+              millenium.overlays.default
+            ];
           }
 
           home-manager.nixosModules.home-manager
@@ -108,27 +109,14 @@
               home-manager.users.${settings.username} = {
                 imports = [
                   ./home.nix
-                  ./modules/hyprland.nix
-                  ./modules/games.nix
-                  ./modules/engineering.nix
-                  ./modules/dev.nix
-                  ./modules/gamedev.nix
-                  ./modules/graphics-design.nix
-                  ./modules/osint.nix
-                  ./modules/messengers.nix
+                  ./modules/domains/home.nix
+                  ./modules/desktop/home.nix
                   ./modules/home-manager/opencode-workaround.nix
                   catppuccin.homeModules.catppuccin
                 ];
               };
             }
           )
-
-          {
-            nixpkgs.overlays = with inputs; [
-              mac-style-plymouth.overlays.default
-              millenium.overlays.default
-            ];
-          }
         ];
       };
     };
