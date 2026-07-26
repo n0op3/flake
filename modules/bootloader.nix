@@ -1,8 +1,6 @@
 { pkgs, ... }:
 {
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
-
     # Silent boot
     # consoleLogLevel = 3;
     # initrd.verbose = false;

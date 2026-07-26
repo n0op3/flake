@@ -28,6 +28,11 @@
     };
   };
 
+  services.udev.packages = with pkgs; [
+    vial
+    qmk-udev-rules
+  ];
+
   i18n.inputMethod = {
     type = "fcitx5";
     enable = true;

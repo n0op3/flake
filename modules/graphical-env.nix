@@ -20,6 +20,17 @@
     ];
   };
 
+  services.pipewire.enable = true;
+
+  environment.sessionVariables = {
+    XDG_DATA_DIRS = [
+      "${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"
+      "/run/current-system/sw/share"
+      "/var/lib/flatpak/exports/share"
+      "$HOME/.local/share/flatpak/exports/share"
+    ];
+  };
+
   environment.systemPackages = with pkgs; [
     adw-gtk3
     adwaita-icon-theme
