@@ -34,6 +34,8 @@
   environment.systemPackages = with pkgs; [
     adw-gtk3
     qogir-icon-theme
+    whitesur-icon-theme
+    tela-icon-theme
     adwaita-icon-theme
     hicolor-icon-theme
     libsForQt5.qt5ct
