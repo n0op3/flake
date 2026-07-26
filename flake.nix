@@ -67,12 +67,15 @@
     {
       nixosConfigurations.${system.hostname} = nixpkgs.lib.nixosSystem {
         specialArgs = {
-          inherit system;
-          inherit settings;
-          inherit inputs;
-          inherit mcsr-nixos;
+          inherit
+            system
+            settings
+            inputs
+            mcsr-nixos
+            ;
         };
         modules = [
+          ./modules/options.nix
           ./cachix.nix
           ./modules/cleanup.nix
           ./configuration.nix
@@ -89,31 +92,38 @@
           }
 
           home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {
-              inherit inputs;
-              inherit settings;
-              inherit mcsr-nixos;
-              inherit system;
-            };
-            home-manager.users.${settings.username} = {
-              imports = [
-                ./home.nix
-                ./modules/hyprland.nix
-                ./modules/games.nix
-                ./modules/engineering.nix
-                ./modules/dev.nix
-                ./modules/gamedev.nix
-                ./modules/graphics-design.nix
-                ./modules/osint.nix
-                ./modules/messengers.nix
-                ./modules/home-manager/opencode-workaround.nix
-                catppuccin.homeModules.catppuccin
-              ];
-            };
-          }
+          (
+            { config, ... }:
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = {
+                inherit
+                  inputs
+                  settings
+                  mcsr-nixos
+                  system
+                  ;
+                nihonConfig = config.nihonConfig;
+              };
+              home-manager.users.${settings.username} = {
+                imports = [
+                  ./home.nix
+                  ./modules/options.nix
+                  ./modules/hyprland.nix
+                  ./modules/games.nix
+                  ./modules/engineering.nix
+                  ./modules/dev.nix
+                  ./modules/gamedev.nix
+                  ./modules/graphics-design.nix
+                  ./modules/osint.nix
+                  ./modules/messengers.nix
+                  ./modules/home-manager/opencode-workaround.nix
+                  catppuccin.homeModules.catppuccin
+                ];
+              };
+            }
+          )
 
           {
             nixpkgs.overlays = with inputs; [
