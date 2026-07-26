@@ -28,11 +28,12 @@
         device = "nodev";
         timeoutStyle = "hidden";
         splashImage = null;
+        configurationLimit = 8;
       };
 
       efi = {
         canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot/efi";
+        efiSysMountPoint = "/boot";
       };
     };
 

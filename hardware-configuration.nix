@@ -21,12 +21,12 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/6e3f1c13-b2d0-428b-87dd-0d5147cdae3c";
+    device = "/dev/disk/by-uuid/9bf5522b-489a-40a9-a859-c908c41f9ad7";
     fsType = "ext4";
   };
 
-  fileSystems."/boot/efi" = {
-    device = "/dev/disk/by-uuid/7088-FFE1";
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/8E5B-0723";
     fsType = "vfat";
     options = [
       "fmask=0022"
@@ -52,7 +52,7 @@
   ];
 
   boot.kernelParams = [ "resume_offset=13279232" ];
-  boot.resumeDevice = "/dev/disk/by-uuid/6e3f1c13-b2d0-428b-87dd-0d5147cdae3c";
+  boot.resumeDevice = "/dev/disk/by-uuid/9bf5522b-489a-40a9-a859-c908c41f9ad7";
   powerManagement.enable = true;
 
   services.xserver.videoDrivers = [

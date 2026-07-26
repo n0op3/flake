@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     (btop.override { cudaSupport = true; })
     usermount
+    efibootmgr
     util-linux
     file
     vim
