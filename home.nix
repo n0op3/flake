@@ -33,7 +33,6 @@
     grimblast
     satty
     eog
-    inputs.nixpkgs-wine10.legacyPackages.${pkgs.stdenv.hostPlatform.system}.wineWow64Packages.stableFull
     libnotify
     davinci-resolve
     networkmanager_dmenu

@@ -33,6 +33,7 @@
     cachix
     nix-ld
     bandwhich
+    wineWow64Packages.stable
   ];
 
   programs.obs-studio = {
