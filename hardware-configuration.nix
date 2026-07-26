@@ -96,4 +96,18 @@
   '';
 
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
+  systemd.services.set-platform-profile = {
+    description = "Set ACPI platform profile to quiet on boot";
+    wantedBy = [ "multi-user.target" ];
+    after = [
+      "tlp.service"
+      "power-profiles-daemon.service"
+      "multi-user.target"
+    ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.bash}/bin/bash -c 'echo low-power > /sys/firmware/acpi/platform_profile'";
+    };
+  };
 }
