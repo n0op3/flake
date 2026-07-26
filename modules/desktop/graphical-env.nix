@@ -35,6 +35,10 @@
     adw-gtk3
     adwaita-icon-theme
     hicolor-icon-theme
+    libsForQt5.qt5ct
+    qt6Packages.qt6ct
+    libsForQt5.qtstyleplugin-kvantum
+    qt6Packages.qtstyleplugin-kvantum
   ];
 
   programs.xfconf.enable = true;
