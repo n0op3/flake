@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   programs.virt-manager.enable = true;
   systemd.services.libvirt-guests.enable = false;
@@ -21,5 +21,6 @@
   environment.systemPackages = with pkgs; [
     podman-compose
     winboat
+    inputs.vm-curator.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

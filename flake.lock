@@ -823,6 +823,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_8": {
+      "locked": {
+        "lastModified": 1777578337,
+        "narHash": "sha256-Ad49moKWeXtKBJNy2ebiTQUEgdLyvGmTeykAQ9xM+Z4=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "15f4ee454b1dce334612fa6843b3e05cf546efab",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -859,6 +875,7 @@
         "millenium": "millenium",
         "musnix": "musnix",
         "nixpkgs": "nixpkgs_7",
+        "vm-curator": "vm-curator",
         "zen-browser": "zen-browser"
       }
     },
@@ -961,6 +978,24 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "vm-curator": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_8"
+      },
+      "locked": {
+        "lastModified": 1784673884,
+        "narHash": "sha256-QeD0WYMtsV+59WNPI2D9HDotL8LSKuqM+MxdrkzyAfc=",
+        "owner": "mroboff",
+        "repo": "vm-curator",
+        "rev": "6c6e9377c41c0d932c8b91cefcd88ae813ab3281",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mroboff",
+        "repo": "vm-curator",
         "type": "github"
       }
     },

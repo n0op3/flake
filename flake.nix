@@ -8,6 +8,7 @@
     hyprland.url = "github:hyprwm/Hyprland";
     concord.url = "github:chojs23/concord";
     hiresTi.url = "github:yelanxin/hiresTI";
+    vm-curator.url = "github:mroboff/vm-curator";
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
