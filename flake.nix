@@ -46,17 +46,11 @@
       self,
       nixpkgs,
       home-manager,
-      musnix,
-      zen-browser,
-      blender-bin,
       catppuccin,
-      mcsr-nixos,
-      aagl,
       ...
     }@inputs:
     let
       system = {
-        arch = "x86_64-linux";
         hostname = "shinjuku";
       };
       settings = rec {
@@ -67,12 +61,7 @@
     {
       nixosConfigurations.${system.hostname} = nixpkgs.lib.nixosSystem {
         specialArgs = {
-          inherit
-            system
-            settings
-            inputs
-            mcsr-nixos
-            ;
+          inherit inputs system settings;
         };
         modules = [
           ./modules/options.nix
@@ -98,12 +87,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = {
-                inherit
-                  inputs
-                  settings
-                  mcsr-nixos
-                  system
-                  ;
+                inherit inputs settings system;
                 nihonConfig = config.nihonConfig;
               };
               home-manager.users.${settings.username} = {
@@ -111,7 +95,6 @@
                   ./home.nix
                   ./modules/domains/home.nix
                   ./modules/desktop/home.nix
-                  ./modules/home-manager/opencode-workaround.nix
                   catppuccin.homeModules.catppuccin
                 ];
               };

@@ -1,11 +1,11 @@
 {
+  inputs,
   lib,
   pkgs,
-  mcsr-nixos,
   ...
 }:
 let
-  mcsrPkgs = mcsr-nixos.packages.${pkgs.stdenv.hostPlatform.system};
+  mcsrPkgs = inputs.mcsr-nixos.packages.${pkgs.stdenv.hostPlatform.system};
 in
 {
   options = {

@@ -1,13 +1,13 @@
 {
+  inputs,
   lib,
   osConfig,
   nihonConfig,
   pkgs,
-  mcsr-nixos,
   ...
 }:
 let
-  mcsrPkgs = mcsr-nixos.packages.${pkgs.stdenv.hostPlatform.system};
+  mcsrPkgs = inputs.mcsr-nixos.packages.${pkgs.stdenv.hostPlatform.system};
 in
 {
   config = lib.mkIf nihonConfig.gaming.enable {
