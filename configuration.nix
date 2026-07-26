@@ -8,8 +8,8 @@
     ./nix-settings.nix
     ./hardware-configuration.nix
     ./system.nix
-    ./network.nix
-    ./input.nix
+    ./modules/network.nix
+    ./modules/input.nix
     ./modules/bootloader.nix
     ./modules/system-packages.nix
     ./modules/logind.nix
