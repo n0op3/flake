@@ -1,11 +1,12 @@
 {
+  inputs,
   ...
 }:
 {
   system.stateVersion = "25.11";
 
   imports = [
-    ./nix-settings.nix
+    ./modules/nix
     ./hardware-configuration.nix
     ./system.nix
     ./modules/users.nix
@@ -17,6 +18,9 @@
     ./modules/shell.nix
     ./modules/virtualization.nix
     ./modules/desktop/graphical-env.nix
+    ./modules/domains/system.nix
+    ./modules/desktop/system.nix
+    inputs.catppuccin.nixosModules.catppuccin
   ];
 
   nihonConfig = {

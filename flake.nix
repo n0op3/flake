@@ -46,39 +46,22 @@
       self,
       nixpkgs,
       home-manager,
-      catppuccin,
       ...
     }@inputs:
     let
-      system = {
+      settings = {
         hostname = "shinjuku";
-      };
-      settings = rec {
         username = "n0op3";
-        homeDirectory = "/home/${username}";
       };
     in
     {
-      nixosConfigurations.${system.hostname} = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.${settings.hostname} = nixpkgs.lib.nixosSystem {
         specialArgs = {
-          inherit inputs system settings;
+          inherit inputs settings;
         };
         modules = [
           ./modules/options.nix
-          ./cachix.nix
           ./configuration.nix
-          ./modules/cleanup.nix
-          ./modules/domains/system.nix
-          ./modules/desktop/system.nix
-
-          catppuccin.nixosModules.catppuccin
-
-          {
-            nixpkgs.overlays = with inputs; [
-              mac-style-plymouth.overlays.default
-              millenium.overlays.default
-            ];
-          }
 
           home-manager.nixosModules.home-manager
           (
@@ -87,17 +70,10 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = {
-                inherit inputs settings system;
+                inherit inputs settings;
                 nihonConfig = config.nihonConfig;
               };
-              home-manager.users.${settings.username} = {
-                imports = [
-                  ./home.nix
-                  ./modules/domains/home.nix
-                  ./modules/desktop/home.nix
-                  catppuccin.homeModules.catppuccin
-                ];
-              };
+              home-manager.users.${settings.username} = ./home.nix;
             }
           )
         ];

@@ -1,12 +1,18 @@
 {
-  pkgs,
   inputs,
   settings,
+  pkgs,
   ...
 }:
 
 {
   home.stateVersion = "25.11";
+
+  imports = [
+    ./modules/domains/home.nix
+    ./modules/desktop/home.nix
+    inputs.catppuccin.homeModules.catppuccin
+  ];
 
   home.packages = with pkgs; [
     anki

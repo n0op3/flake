@@ -1,4 +1,4 @@
-{ system, ... }: {
+{ settings, ... }: {
   boot.extraModprobeConfig = ''
     options iwlwifi power_save=0 power_level=0
     options iwlmvm power_scheme=1
@@ -7,7 +7,7 @@
 
   systemd.services.NetworkManager-wait-online.enable = false;
   networking = {
-    hostName = "${system.hostname}";
+    hostName = "${settings.hostname}";
 
     networkmanager = {
       enable = true;
