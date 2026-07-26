@@ -21,5 +21,6 @@
 
   nihonConfig = {
     gaming.enable = true;
+    plymouth.enable = false;
   };
 }
