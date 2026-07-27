@@ -17,6 +17,7 @@
       prismlauncher
       smassh
       vinegar
+      protonplus
     ];
   };
 }
