@@ -27,6 +27,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    themecord = {
+      url = "github:danihek/themecord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     hiresTi = {
       url = "github:yelanxin/hiresTI";
       inputs.nixpkgs.follows = "nixpkgs";

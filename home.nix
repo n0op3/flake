@@ -27,6 +27,8 @@
     jj-starship
     kitty
     pywal16
+    pywalfox-native
+    inputs.themecord.packages.${pkgs.stdenv.hostPlatform.system}.default
     bibata-cursors
     cava
     scrcpy
@@ -47,7 +49,6 @@
     russ
     pamixer
     qalculate-gtk
-    pywalfox-native
     firefoxpwa
     nwg-look
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
