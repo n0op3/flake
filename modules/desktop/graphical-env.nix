@@ -32,28 +32,29 @@
   };
 
   environment.systemPackages = with pkgs; [
-    adw-gtk3
+    # Theming utils and libs
+    sassc
+    gtk-engine-murrine
+    gnome-themes-extra
+    glib
+    gsettings-desktop-schemas
+    xsettingsd
+    libsForQt5.qt5ct
+    qt6Packages.qt6ct
+
+    # Themes
     qogir-icon-theme
     whitesur-icon-theme
     tela-icon-theme
     adwaita-icon-theme
     hicolor-icon-theme
-    libsForQt5.qt5ct
-    qt6Packages.qt6ct
-    libsForQt5.qtstyleplugin-kvantum
-    qt6Packages.qtstyleplugin-kvantum
+
+    nautilus
   ];
 
   programs.xfconf.enable = true;
   services.gvfs.enable = true;
   services.tumbler.enable = true;
-  programs.thunar = {
-    enable = true;
-    plugins = with pkgs; [
-      thunar-archive-plugin
-      thunar-volman
-    ];
-  };
 
   fonts = {
     fontconfig = {
