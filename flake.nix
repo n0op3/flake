@@ -2,13 +2,40 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    musnix.url = "github:musnix/musnix";
-    catppuccin.url = "github:catppuccin/nix";
-    millenium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
-    hyprland.url = "github:hyprwm/Hyprland";
-    concord.url = "github:chojs23/concord";
-    hiresTi.url = "github:yelanxin/hiresTI";
-    vm-curator.url = "github:mroboff/vm-curator";
+    musnix = {
+      url = "github:musnix/musnix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    catppuccin = {
+      url = "github:catppuccin/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    millenium = {
+      url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    concord = {
+      url = "github:chojs23/concord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hiresTi = {
+      url = "github:yelanxin/hiresTI";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    vm-curator = {
+      url = "github:mroboff/vm-curator";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
