@@ -51,7 +51,6 @@
     qalculate-gtk
     firefoxpwa
     nwg-look
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     ungoogled-chromium
     tor-browser
     inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -64,6 +63,13 @@
     tuxedo
     ydotool
   ];
+
+  programs.librewolf = {
+    enable = true;
+    nativeMessagingHosts = with pkgs; [
+      pywalfox-native
+    ];
+  };
 
   services.activitywatch = {
     enable = true;
