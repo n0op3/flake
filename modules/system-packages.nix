@@ -21,7 +21,6 @@
     yazi
     trash-cli
     usbutils
-    nettools
     tree
     man-pages
     tldr
