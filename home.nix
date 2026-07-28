@@ -69,16 +69,6 @@
     watchers.awatcher.package = pkgs.awatcher;
   };
 
-  gtk = rec {
-    enable = true;
-    theme = {
-      name = "adw-gtk3-dark";
-      package = pkgs.adw-gtk3;
-    };
-
-    gtk4.theme = theme;
-  };
-
   qt = {
     enable = true;
     style.name = "kvantum";
