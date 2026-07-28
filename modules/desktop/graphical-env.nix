@@ -50,6 +50,7 @@
     hicolor-icon-theme
 
     nautilus
+    kdePackages.plasma-workspace # for wine tray icons
   ];
 
   programs.xfconf.enable = true;
