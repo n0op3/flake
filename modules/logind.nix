@@ -8,6 +8,7 @@
     enable = true;
     settings = {
       clear_password = true;
+      bigclock = "en";
     };
   };
 }
