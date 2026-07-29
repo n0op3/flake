@@ -18,6 +18,7 @@
       smassh
       vinegar
       protonplus
+      protontricks
     ];
   };
 }
