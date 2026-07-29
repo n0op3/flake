@@ -4,6 +4,8 @@
     inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
   }/share/hypr/stubs";
 
+  services.hyprpolkitagent.enable = true;
+
   home.packages = with pkgs; [
     hyprlock
     hypridle
