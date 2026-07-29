@@ -19,7 +19,7 @@
 
     hyprland = {
       url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs"; # NOTE: try commenting that out if hypr stuff breaks
     };
 
     concord = {
