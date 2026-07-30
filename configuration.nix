@@ -8,7 +8,7 @@
     ./modules/users.nix
     ./modules/network.nix
     ./modules/input.nix
-    ./modules/bootloader.nix
+    ./modules/boot.nix
     ./modules/system-packages.nix
     ./modules/logind.nix
     ./modules/shell.nix

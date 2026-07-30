@@ -1,4 +1,9 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  lib,
+  pkgs,
+  ...
+}:
 {
   programs.virt-manager.enable = true;
   systemd.services.libvirt-guests.enable = false;
@@ -17,6 +22,14 @@
       setSocketVariable = true;
     };
   };
+
+  # Disable on boot
+  systemd.services.docker.wantedBy = lib.mkForce [ ];
+  systemd.sockets.docker.wantedBy = [ "sockets.target" ];
+  systemd.services.libvirtd.wantedBy = lib.mkForce [ ];
+  systemd.sockets.libvirtd.wantedBy = [ "sockets.target" ];
+  systemd.sockets.libvirtd-ro.wantedBy = [ "sockets.target" ];
+  systemd.sockets.libvirtd-admin.wantedBy = [ "sockets.target" ];
 
   environment.systemPackages = with pkgs; [
     podman-compose

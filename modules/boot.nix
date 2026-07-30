@@ -5,8 +5,33 @@
   ...
 }:
 {
+  # Disable timesyncd on startup, launch on graphical.target
+  systemd.services.systemd-timesyncd = {
+    wantedBy = lib.mkForce [ "graphical.target" ];
+    unitConfig = {
+      Before = lib.mkForce "";
+      After = lib.mkForce "display-manager.service";
+    };
+  };
+
+  # No backlight restoration
+  systemd.services."systemd-backlight@".enable = false;
+
   boot = lib.mkMerge [
     {
+      kernelPackages = pkgs.linuxPackages_latest;
+
+      kernel.sysctl = {
+        "kernel.sysrq" = 1;
+        "kernel.panic" = 10;
+        "kernel.panic_on_oops" = 1;
+      };
+
+      initrd = {
+        systemd.enable = true;
+        checkJournalingFS = false;
+      };
+
       loader = {
         timeout = 0;
 

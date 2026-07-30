@@ -1,13 +1,5 @@
-{ pkgs, ... }: {
+{ ... }: {
   time.timeZone = "Europe/Warsaw";
-
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  boot.kernel.sysctl = {
-    "kernel.sysrq" = 1;
-    "kernel.panic" = 10;
-    "kernel.panic_on_oops" = 1;
-  };
 
   security.pam.services = {
     greetd.enableGnomeKeyring = true;
