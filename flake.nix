@@ -1,6 +1,7 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     musnix = {
       url = "github:musnix/musnix";
@@ -19,7 +20,7 @@
 
     hyprland = {
       url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs"; # NOTE: try commenting that out if hypr stuff breaks
+      inputs.nixpkgs.follows = "nixpkgs-unstable"; # NOTE: try commenting that out if hypr stuff breaks
     };
 
     concord = {
@@ -38,8 +39,8 @@
     };
 
     pwndbg = {
-        url = "github:pwndbg/pwndbg";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:pwndbg/pwndbg";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     vm-curator = {
@@ -48,7 +49,7 @@
     };
 
     home-manager = {
-      url = "github:nix-community/home-manager/master";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -68,7 +69,7 @@
     };
 
     aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix";
+      url = "github:ezKEa/aagl-gtk-on-nix/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -77,20 +78,33 @@
     {
       self,
       nixpkgs,
+      nixpkgs-unstable,
       home-manager,
       ...
     }@inputs:
     let
+      system = "x86_64-linux";
       settings = {
         hostname = "shinjuku";
         username = "n0op3";
       };
+      pkgs-unstable = import nixpkgs-unstable {
+        inherit system;
+      };
     in
     {
       nixosConfigurations.${settings.hostname} = nixpkgs.lib.nixosSystem {
+        inherit system;
+
         specialArgs = {
-          inherit inputs settings;
+          inherit
+            system
+            inputs
+            settings
+            pkgs-unstable
+            ;
         };
+
         modules = [
           ./modules/options.nix
           ./configuration.nix
@@ -102,7 +116,12 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = {
-                inherit inputs settings;
+                inherit
+                  system
+                  inputs
+                  settings
+                  pkgs-unstable
+                  ;
                 nihonConfig = config.nihonConfig;
               };
               home-manager.users.${settings.username} = ./home.nix;

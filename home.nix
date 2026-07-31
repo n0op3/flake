@@ -2,6 +2,7 @@
   inputs,
   settings,
   pkgs,
+  pkgs-unstable,
   ...
 }:
 
@@ -60,7 +61,7 @@
     sone
     inputs.hiresTi.packages.${pkgs.stdenv.hostPlatform.system}.default
     seahorse
-    tuxedo
+    pkgs-unstable.tuxedo
     ydotool
   ];
 

@@ -1,4 +1,4 @@
-{ lib, ... }: {
+{ ... }: {
   nix.settings = {
     cores = 10;
     max-jobs = "auto";
@@ -14,7 +14,6 @@
     ];
   };
 
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [
