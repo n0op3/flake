@@ -37,6 +37,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    pwndbg = {
+        url = "github:pwndbg/pwndbg";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     vm-curator = {
       url = "github:mroboff/vm-curator";
       inputs.nixpkgs.follows = "nixpkgs";

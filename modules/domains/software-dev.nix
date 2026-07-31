@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [
     ./webdev.nix
@@ -35,6 +35,7 @@
     github-cli
     bear
     gdb
+    inputs.pwndbg.packages.${pkgs.stdenv.hostPlatform.system}.pwndbg
     just
     perf
     hotspot
