@@ -21,6 +21,7 @@
     yazi
     trash-cli
     usbutils
+    smartmontools
     tree
     man-pages
     tldr
