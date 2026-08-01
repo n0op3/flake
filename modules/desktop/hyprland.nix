@@ -1,4 +1,9 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  pkgs-unstable,
+  ...
+}:
 {
   home.file.".local/share/hyprland/stubs".source = "${
     inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
@@ -9,6 +14,7 @@
   home.packages = with pkgs; [
     hyprlock
     hypridle
+    hyprmon
     hyprshutdown
     hyprpicker
     hyprsunset
@@ -18,7 +24,7 @@
     brightnessctl
     playerctl
     wl-clipboard
-    clipse
+    pkgs-unstable.clipse
     rofi-power-menu
     unipicker
     pwvucontrol
