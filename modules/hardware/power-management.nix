@@ -34,4 +34,17 @@
       STOP_CHARGE_THRESH_BAT0 = 1;
     };
   };
+
+  # NOTE: allow executing gamemoderun commands without sudo prompt
+  security.polkit.extraConfig = ''
+    polkit.addRule(function(action, subject) {
+      if (action.id == "org.freedesktop.policykit.exec" &&
+          subject.isInGroup("wheel")) {
+        var program = action.lookupString("program");
+        if (program && (program.match(/cpugovctl$/) || program.match(/procsysctl$/))) {
+          return polkit.Result.YES;
+        }
+      }
+    });
+  '';
 }
