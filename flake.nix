@@ -18,10 +18,19 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Hyprland
+
     hyprland = {
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs-unstable"; # NOTE: try commenting that out if hypr stuff breaks
     };
+
+    hyprcapture = {
+      url = "github:gfhdhytghd/HyprCapture";
+      inputs.hyprland.follows = "hyprland";
+    };
+
+    # END Hyprland
 
     concord = {
       url = "github:chojs23/concord";

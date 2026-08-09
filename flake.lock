@@ -285,6 +285,36 @@
         "type": "github"
       }
     },
+    "hyprcapture": {
+      "inputs": {
+        "hyprland": [
+          "hyprland"
+        ],
+        "nixpkgs": [
+          "hyprcapture",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "hyprcapture",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786069878,
+        "narHash": "sha256-iTFcsMLM1OnpNrP4kEFJDoB7N3kwqezkRzWn0VN+Gmg=",
+        "owner": "gfhdhytghd",
+        "repo": "HyprCapture",
+        "rev": "20a34c29ecdff3332922da6d5d319801d4d5d1f1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gfhdhytghd",
+        "repo": "HyprCapture",
+        "type": "github"
+      }
+    },
     "hyprcursor": {
       "inputs": {
         "hyprlang": [
@@ -841,6 +871,7 @@
         "concord": "concord",
         "hiresTi": "hiresTi",
         "home-manager": "home-manager",
+        "hyprcapture": "hyprcapture",
         "hyprland": "hyprland",
         "mac-style-plymouth": "mac-style-plymouth",
         "mcsr-nixos": "mcsr-nixos",
