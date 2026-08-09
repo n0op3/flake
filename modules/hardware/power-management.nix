@@ -8,7 +8,6 @@
     wantedBy = [ "multi-user.target" ];
     after = [
       "tlp.service"
-      "power-profiles-daemon.service"
       "multi-user.target"
     ];
     serviceConfig = {
