@@ -34,6 +34,7 @@
     nix-ld
     bandwhich
     wineWow64Packages.stable
+    winetricks
   ];
 
   programs.gpu-screen-recorder.enable = true;
