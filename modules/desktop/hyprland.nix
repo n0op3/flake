@@ -27,7 +27,6 @@
     hyprpicker
     hyprsunset
     hyprpolkitagent
-    gpu-screen-recorder
     quickshell
     swaylock
     waybar
