@@ -14,6 +14,8 @@
     vital
     yabridge
     yabridgectl
+    sfizz
+    sfizz-ui
     audacity
     (carla.override {
       withQt = true;
