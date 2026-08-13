@@ -28,6 +28,7 @@
     hyprsunset
     hyprpolkitagent
     gpu-screen-recorder
+    quickshell
     swaylock
     waybar
     brightnessctl
