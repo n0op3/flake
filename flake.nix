@@ -20,10 +20,7 @@
 
     # Hyprland
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs-unstable"; # NOTE: try commenting that out if hypr stuff breaks
-    };
+    hyprland.url = "github:hyprwm/Hyprland";
 
     hyprcapture = {
       url = "github:gfhdhytghd/HyprCapture";
