@@ -15,6 +15,11 @@
     gnome.gnome-keyring.enable = true;
     flatpak.enable = true;
 
+    logind.settings.Login = {
+        HandleLidSwitch = "suspend";
+        HandlePowerKey = "suspend";
+    };
+
     udisks2 = {
       enable = true;
       mountOnMedia = true;

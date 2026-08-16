@@ -10,7 +10,7 @@
     ./modules/input.nix
     ./modules/boot.nix
     ./modules/system-packages.nix
-    ./modules/logind.nix
+    ./modules/display-manager.nix
     ./modules/shell.nix
     ./modules/virtualization.nix
     ./modules/desktop/graphical-env.nix
