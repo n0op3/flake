@@ -18,6 +18,7 @@
     unzip
     duf
     gdu
+    imagemagick
     yazi
     trash-cli
     usbutils
