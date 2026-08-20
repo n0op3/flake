@@ -29,7 +29,7 @@
     kitty
     pywal16
     pywalfox-native
-    inputs.themecord.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.themecord.packages.${pkgs.system}.default
     bibata-cursors
     cava
     scrcpy
@@ -54,12 +54,12 @@
     nwg-look
     ungoogled-chromium
     tor-browser
-    inputs.blender-bin.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.blender-bin.packages.${pkgs.system}.default
     aw-qt
     awatcher
     libinput-gestures
     sone
-    inputs.hiresTi.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.hiresTi.packages.${pkgs.system}.default
     seahorse
     pkgs-unstable.tuxedo
     ydotool

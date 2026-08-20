@@ -3,6 +3,23 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    # Custom flakes
+    kawaru = {
+      url = "github:n0op3/kawaru";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Hyprland
+
+    hyprland.url = "github:hyprwm/Hyprland";
+
+    hyprcapture = {
+      url = "github:gfhdhytghd/HyprCapture";
+      inputs.hyprland.follows = "hyprland";
+    };
+
+    # END Hyprland
+
     musnix = {
       url = "github:musnix/musnix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,17 +34,6 @@
       url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Hyprland
-
-    hyprland.url = "github:hyprwm/Hyprland";
-
-    hyprcapture = {
-      url = "github:gfhdhytghd/HyprCapture";
-      inputs.hyprland.follows = "hyprland";
-    };
-
-    # END Hyprland
 
     concord = {
       url = "github:chojs23/concord";

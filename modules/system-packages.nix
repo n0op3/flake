@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
     (btop.override { cudaSupport = true; })
@@ -11,6 +11,7 @@
     wget
     fzf
     ripgrep
+    inputs.kawaru.packages.${pkgs.system}.default
     lsd
     zoxide
     bat

@@ -2,9 +2,9 @@
 {
   programs.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     portalPackage =
-      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+      inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
   };
 
   environment.pathsToLink = [
@@ -15,7 +15,7 @@
   xdg.portal = {
     enable = true;
     config.common.default = "*";
-    extraPortals = with inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}; [
+    extraPortals = with inputs.hyprland.packages.${pkgs.system}; [
       xdg-desktop-portal-hyprland
     ];
   };

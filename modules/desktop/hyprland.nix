@@ -6,13 +6,13 @@
 }:
 {
   home.file.".local/share/hyprland/stubs".source = "${
-    inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
+    inputs.hyprland.packages.${pkgs.system}.hyprland
   }/share/hypr/stubs";
 
   home.file.".config/hypr/nix-plugins.lua".text = ''
     return {
      "${
-       inputs.hyprcapture.packages.${pkgs.stdenv.hostPlatform.system}.hyprcapture
+       inputs.hyprcapture.packages.${pkgs.system}.hyprcapture
      }/lib/libhyprcapture.so",
     }
   '';
