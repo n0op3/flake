@@ -59,6 +59,7 @@
     awatcher
     libinput-gestures
     tidal-hifi
+    sone
     inputs.hiresTi.packages.${pkgs.system}.default
     seahorse
     pkgs-unstable.tuxedo
