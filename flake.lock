@@ -676,11 +676,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787207947,
-        "narHash": "sha256-DPNrtq0DZ/dkXuJSezSEgF2U9EGHd9minpDQkBIatfU=",
+        "lastModified": 1787398141,
+        "narHash": "sha256-Gg/u8j7mA0FLgDLekPXUX++LVDvUV+k+70uVXRkR7u4=",
         "owner": "n0op3",
         "repo": "kawaru",
-        "rev": "0c0e678b64d2fb45a8b46b0c056b353431c94df0",
+        "rev": "7fb8fa22f3423dc5a1c9e56192fc19d05c714b0d",
         "type": "github"
       },
       "original": {
