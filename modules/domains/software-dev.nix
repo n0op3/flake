@@ -35,7 +35,7 @@
     github-cli
     bear
     gdb
-    inputs.pwndbg.packages.${pkgs.system}.pwndbg
+    inputs.pwndbg.packages.${pkgs.stdenv.hostPlatform.system}.pwndbg
     just
     perf
     hotspot

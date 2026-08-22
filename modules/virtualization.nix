@@ -34,6 +34,6 @@
   environment.systemPackages = with pkgs; [
     podman-compose
     winboat
-    inputs.vm-curator.packages.${pkgs.system}.default
+    inputs.vm-curator.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

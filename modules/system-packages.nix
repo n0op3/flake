@@ -11,7 +11,7 @@
     wget
     fzf
     ripgrep
-    inputs.kawaru.packages.${pkgs.system}.default
+    inputs.kawaru.packages.${pkgs.stdenv.hostPlatform.system}.default
     lsd
     zoxide
     bat
