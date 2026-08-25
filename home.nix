@@ -38,6 +38,7 @@
     eog
     libnotify
     davinci-resolve
+    kdePackages.kdenlive
     networkmanager_dmenu
     dragon-drop
     ffmpeg
