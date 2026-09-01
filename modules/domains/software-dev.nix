@@ -19,6 +19,7 @@
     luarocks
     go
     python3
+    android-tools
 
     # Rust
     rustup

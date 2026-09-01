@@ -13,6 +13,7 @@
       heroic
       millennium-steam
       steam-run
+      steamcmd
       gamemode
       prismlauncher
       smassh
