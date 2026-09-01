@@ -19,7 +19,7 @@
 
   boot = lib.mkMerge [
     {
-      kernelPackages = pkgs.linuxPackages_latest;
+      kernelPackages = pkgs.linuxPackages_7_1;
 
       kernel.sysctl = {
         "kernel.sysrq" = 1;
