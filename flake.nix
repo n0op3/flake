@@ -11,12 +11,12 @@
 
     # Hyprland
 
-    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland/5751911091d2";
 
-    # hyprcapture = {
-    #   url = "github:gfhdhytghd/HyprCapture";
-    #   inputs.hyprland.follows = "hyprland";
-    # };
+    hyprcapture = {
+      url = "github:gfhdhytghd/HyprCapture";
+      inputs.hyprland.follows = "hyprland";
+    };
 
     # END Hyprland
 
