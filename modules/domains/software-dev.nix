@@ -14,6 +14,7 @@
     clang
     clang-tools
     cmake
+    meson
     gnumake
     lua51Packages.lua
     luarocks
