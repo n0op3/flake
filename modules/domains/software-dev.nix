@@ -42,6 +42,7 @@
     just
     perf
     hotspot
+    wayland-scanner
     jq
     opencode
     pkg-config
