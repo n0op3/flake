@@ -15,6 +15,7 @@
     clang-tools
     cmake
     meson
+    ninja
     gnumake
     lua51Packages.lua
     luarocks
