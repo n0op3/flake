@@ -1,8 +1,8 @@
 { inputs, pkgs, ... }:
 {
   imports = [
+    ./gamedev.nix
     ./webdev.nix
-    ./rust.nix
   ];
 
   home.packages = with pkgs; [
