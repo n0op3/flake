@@ -2,6 +2,7 @@
 {
   imports = [
     ./webdev.nix
+    ./rust.nix
   ];
 
   home.packages = with pkgs; [
@@ -22,15 +23,6 @@
     go
     python3
     android-tools
-
-    # Rust
-    rustup
-    bacon
-    cargo-xwin
-    cargo-audit
-    cargo-nextest
-    cargo-binstall
-    cargo-tarpaulin
 
     # Utilities
     git-credential-manager
