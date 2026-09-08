@@ -52,6 +52,7 @@
     cloudflared
     syncthing
     litecli
+    kicad
   ];
 
   programs.jujutsu.enable = true;

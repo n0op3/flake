@@ -1,6 +1,9 @@
 { pkgs, ... }: {
   hardware.uinput.enable = true;
-  boot.kernelModules = [ "uinput" ];
+  boot.kernelModules = [
+    "uinput"
+    "vhci-hcd"
+  ];
 
   hardware.opentabletdriver.enable = true;
 
