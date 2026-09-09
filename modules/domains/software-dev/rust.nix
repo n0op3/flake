@@ -6,7 +6,7 @@
 }:
 let
   fx = inputs.fenix.packages.${system};
-  rust = fx.combine [
+  rust-stable = fx.combine [
     fx.stable.rustc
     fx.stable.cargo
     fx.stable.clippy
@@ -15,10 +15,25 @@ let
     fx.stable.rust-analyzer
     fx.targets.x86_64-pc-windows-msvc.stable.rust-std
   ];
+  rust-nightly = fx.combine [
+    fx.latest.rustc
+    fx.latest.cargo
+    fx.latest.clippy
+    fx.latest.rustfmt
+    fx.latest.rust-src
+    fx.latest.rust-analyzer
+  ];
 in
 {
   environment.systemPackages = with pkgs; [
-    rust
+    rust-stable
+    (pkgs.runCommand "rust-nightly-bin" { } ''
+      mkdir -p $out/bin
+      ln -s ${rust-nightly}/bin/cargo $out/bin/cargo-nightly
+      ln -s ${rust-nightly}/bin/rustc $out/bin/rustc-nightly
+      ln -s ${rust-nightly}/bin/clippy-driver $out/bin/clippy-driver-nightly
+      ln -s ${rust-nightly}/bin/cargo-clippy $out/bin/cargo-clippy-nightly
+    '')
 
     bacon
     cargo-xwin
