@@ -20,8 +20,12 @@
     "usbhid"
     "rtsx_pci_sdmmc"
   ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
+  boot.kernelModules = [
+    "kvm-intel"
+    "v4l2loopback"
+    "snd-aloop"
+  ];
+  boot.extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
 
   hardware.enableAllFirmware = true;
   hardware.bluetooth = {

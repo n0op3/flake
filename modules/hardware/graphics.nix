@@ -25,6 +25,7 @@
 
   boot.extraModprobeConfig = ''
     options nvidia_modeset vblank_sem_control=0
+    options v4l2loopback devices=2 video_nr=1,10 card_label="OBS Cam,droidcam" exclusive_caps=1,1
   '';
 
   services.xserver.videoDrivers = [

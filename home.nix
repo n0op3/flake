@@ -14,6 +14,8 @@
   ];
 
   home.packages = with pkgs; [
+    droidcam
+    v4l-utils
     anki
     gnome-clocks
     libreoffice
