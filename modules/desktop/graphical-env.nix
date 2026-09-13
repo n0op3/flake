@@ -29,6 +29,9 @@
       "/var/lib/flatpak/exports/share"
       "$HOME/.local/share/flatpak/exports/share"
     ];
+    QML2_IMPORT_PATH = [
+      "${pkgs.kdePackages.qt5compat}/lib/qt-6/qml"
+    ];
   };
 
   environment.systemPackages = with pkgs; [
@@ -41,6 +44,7 @@
     xsettingsd
     libsForQt5.qt5ct
     qt6Packages.qt6ct
+    kdePackages.qt5compat
 
     # Themes
     qogir-icon-theme
