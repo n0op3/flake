@@ -5,15 +5,6 @@
   ...
 }:
 {
-  # Disable timesyncd on startup, launch on graphical.target
-    systemd.services.systemd-timesyncd = {
-        wantedBy = lib.mkForce [ "graphical.target" ];
-        unitConfig = {
-            Before = lib.mkForce "";
-            After = lib.mkForce "graphical.target";
-        };
-    };
-
   # No backlight restoration
   systemd.services."systemd-backlight@".enable = false;
 

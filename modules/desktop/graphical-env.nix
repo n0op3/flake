@@ -46,7 +46,9 @@
     qt6Packages.qt6ct
     kdePackages.qt5compat
 
+
     # Themes
+    adw-gtk3
     qogir-icon-theme
     whitesur-icon-theme
     tela-icon-theme
