@@ -64,6 +64,7 @@
   services.tumbler.enable = true;
 
   fonts = {
+    fontDir.enable = true;
     fontconfig = {
       enable = true;
       defaultFonts = rec {
