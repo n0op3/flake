@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  pkgs-unstable,
   ...
 }:
 {
@@ -10,7 +11,7 @@
 
   boot = lib.mkMerge [
     {
-      kernelPackages = pkgs.linuxPackages_7_1;
+      kernelPackages = pkgs-unstable.linuxPackages_7_2;
 
       kernel.sysctl = {
         "kernel.sysrq" = 1;

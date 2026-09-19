@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ config, pkgs, ... }: {
   boot.initrd.kernelModules = [ "nvidia" ];
 
   hardware.graphics = {
@@ -11,6 +11,7 @@
   };
 
   hardware.nvidia = {
+    package = config.boot.kernelPackages.nvidiaPackages.new_feature;
     modesetting.enable = true;
     powerManagement.enable = true;
     powerManagement.finegrained = false;
