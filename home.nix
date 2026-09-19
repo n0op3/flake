@@ -1,6 +1,7 @@
 {
   inputs,
   settings,
+  config,
   pkgs,
   pkgs-unstable,
   ...
@@ -70,6 +71,7 @@
 
   programs.firefox = {
     enable = true;
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
     nativeMessagingHosts = with pkgs; [
       pywalfox-native
     ];
