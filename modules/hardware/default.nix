@@ -27,7 +27,7 @@
   ];
   boot.extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
 
-  hardware.enableAllFirmware = true;
+  hardware.enableRedistributableFirmware = true;
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = false;

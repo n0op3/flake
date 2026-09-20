@@ -1,6 +1,8 @@
 { ... }: {
   system.stateVersion = "25.11";
 
+  home-manager.startAsUserService = true;
+
   imports = [
     ./system.nix
     ./modules/nix

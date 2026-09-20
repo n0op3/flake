@@ -27,14 +27,7 @@
       loader = {
         timeout = 0;
 
-        grub = {
-          enable = true;
-          efiSupport = true;
-          device = "nodev";
-          timeoutStyle = "hidden";
-          splashImage = null;
-          configurationLimit = 8;
-        };
+        systemd-boot.enable = true;
 
         efi = {
           canTouchEfiVariables = true;

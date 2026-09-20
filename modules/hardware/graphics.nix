@@ -1,6 +1,4 @@
 { config, pkgs, ... }: {
-  boot.initrd.kernelModules = [ "nvidia" ];
-
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
