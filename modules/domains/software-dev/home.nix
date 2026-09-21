@@ -47,9 +47,10 @@
     silicon
     rpi-imager
     cloudflared
-    syncthing
     litecli
   ];
+
+  services.syncthing.enable = true;
 
   programs.jujutsu.enable = true;
   programs.git = {
