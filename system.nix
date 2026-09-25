@@ -10,14 +10,16 @@
     binfmt = true; # Allow running AppImages just by supplying their path
   };
 
+  programs.kclock.enable = true;
+
   services = {
     envfs.enable = true;
     gnome.gnome-keyring.enable = true;
     flatpak.enable = true;
 
     logind.settings.Login = {
-        HandleLidSwitch = "suspend";
-        HandlePowerKey = "suspend";
+      HandleLidSwitch = "suspend";
+      HandlePowerKey = "suspend";
     };
 
     udisks2 = {

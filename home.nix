@@ -18,7 +18,6 @@
     droidcam
     v4l-utils
     anki
-    gnome-clocks
     libreoffice
     fastfetch
     vial
