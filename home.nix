@@ -66,6 +66,7 @@
     seahorse
     pkgs-unstable.tuxedo
     ydotool
+    lenovo-legion
   ];
 
   programs.firefox = {

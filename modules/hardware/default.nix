@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   modulesPath,
   ...
 }:
@@ -24,8 +25,16 @@
     "kvm-intel"
     "v4l2loopback"
     "snd-aloop"
+    "legion-laptop"
   ];
-  boot.extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    v4l2loopback
+    lenovo-legion-module
+  ];
+
+  services.udev.extraRules = ''
+    SUBSYSTEM=="hwmon", ATTR{name}=="legion_hwmon", RUN+="${pkgs.coreutils}/bin/chmod -R a+rw /sys%p"
+  '';
 
   hardware.enableAllFirmware = true;
   hardware.bluetooth = {
