@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ settings, pkgs, ... }: {
   nix.settings = {
     cores = 10;
     max-jobs = "auto";
@@ -22,6 +22,11 @@
       "pnpm-10.29.2"
       "electron-40.10.5"
     ];
+  };
+
+  programs.nh = {
+    enable = true;
+    flake = "/home/${settings.username}/flake";
   };
 
   programs.nix-ld.enable = true;
