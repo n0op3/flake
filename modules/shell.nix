@@ -10,11 +10,11 @@
   environment.shellAliases = {
     "nrs" = "sudo nixos-rebuild switch";
     "nrsu" = "sudo nixos-rebuild switch --upgrade";
-    "nsp" = "nix-shell -p --command zsh";
+    "nsp" = "nom-shell -p --command zsh";
+    "dv" = "nom develop -c $SHELL";
+    "dvi" = "nom develop --impure -c $SHELL";
     "rm" = "trash";
     "del" = "/run/current-system/sw/bin/rm";
-    "dv" = "nix develop -c $SHELL";
-    "dvi" = "nix develop --impure -c $SHELL";
     "bandwhich" = "sudo bandwhich";
   };
 }

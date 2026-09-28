@@ -29,6 +29,10 @@
     flake = "/home/${settings.username}/flake";
   };
 
+  environment.systemPackages = with pkgs; [
+    nix-output-monitor
+  ];
+
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     # Any missing dynamic libraries for unpackaged programs
