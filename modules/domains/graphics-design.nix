@@ -5,5 +5,6 @@
     inkscape
     fontforge-gtk
     krita
+    figma-linux
   ];
 }
