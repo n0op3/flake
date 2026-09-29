@@ -34,6 +34,7 @@
     playerctl
     wl-clipboard
     pkgs-unstable.clipse
+    inputs.fsel.packages.${pkgs.stdenv.hostPlatform.system}.default
     rofi-power-menu
     unipicker
     pwvucontrol
