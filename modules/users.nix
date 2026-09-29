@@ -7,6 +7,7 @@
       "render"
       "audio"
       "input"
+      "dialout"
       "uinput"
       "libvirtd"
       "wireshark"
