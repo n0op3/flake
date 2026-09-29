@@ -3,6 +3,11 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    home-manager = {
+      url = "github:nix-community/home-manager/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Custom flakes
     kawaru = {
       url = "github:n0op3/kawaru";
@@ -40,6 +45,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    fsel = {
+      url = "github:Mjoyufull/fsel";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     themecord = {
       url = "github:danihek/themecord";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -57,11 +67,6 @@
 
     vm-curator = {
       url = "github:mroboff/vm-curator";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    home-manager = {
-      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
