@@ -17,8 +17,7 @@
     glrnvim
 
     # Toolchains
-    clang
-    clang-tools
+    gcc
     cmake
     meson
     ninja
