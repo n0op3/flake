@@ -18,9 +18,9 @@
 
     hyprland.url = "github:hyprwm/Hyprland/5751911091d2";
 
-    hyprcapture = {
-      url = "github:gfhdhytghd/HyprCapture";
-      inputs.hyprland.follows = "hyprland";
+    hyprquickframe = {
+      url = "github:n0op3/HyprQuickFrame";
+      inputs.hyprland.follows = "nixpkgs";
     };
 
     # END Hyprland

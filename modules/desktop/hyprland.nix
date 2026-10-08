@@ -9,14 +9,6 @@
     inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
   }/share/hypr/stubs";
 
-  home.file.".config/hypr/nix-plugins.lua".text = ''
-    return {
-     "${
-       inputs.hyprcapture.packages.${pkgs.stdenv.hostPlatform.system}.hyprcapture
-     }/lib/libhyprcapture.so",
-    }
-  '';
-
   services.hyprpolkitagent.enable = true;
 
   home.packages = with pkgs; [
@@ -27,6 +19,7 @@
     hyprpicker
     hyprsunset
     hyprpolkitagent
+    inputs.hyprquickframe.packages.${pkgs.stdenv.hostPlatform.system}.default
     quickshell
     swaylock
     waybar
