@@ -16,7 +16,7 @@
 
     # Hyprland
 
-    hyprland.url = "github:hyprwm/Hyprland/5751911091d2";
+    hyprland.url = "github:hyprwm/Hyprland";
 
     hyprquickframe = {
       url = "github:n0op3/HyprQuickFrame";
