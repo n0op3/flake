@@ -20,7 +20,7 @@
     gcc
     cmake
     meson
-    ninja
+    samurai
     gnumake
     lua51Packages.lua
     luarocks
