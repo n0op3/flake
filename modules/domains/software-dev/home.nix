@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   pkgs-unstable,
   ...
@@ -34,7 +33,6 @@
     github-cli
     bear
     gdb
-    inputs.pwndbg.packages.${pkgs.stdenv.hostPlatform.system}.pwndbg
     just
     perf
     hotspot

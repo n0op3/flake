@@ -45,11 +45,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    fsel = {
-      url = "github:Mjoyufull/fsel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     themecord = {
       url = "github:danihek/themecord";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -57,11 +52,6 @@
 
     hiresTi = {
       url = "github:yelanxin/hiresTI";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    pwndbg = {
-      url = "github:pwndbg/pwndbg";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
