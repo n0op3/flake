@@ -40,8 +40,6 @@
     winetricks
   ];
 
-  programs.gpu-screen-recorder.enable = true;
-
   programs.obs-studio = {
     enable = true;
     enableVirtualCamera = true;
