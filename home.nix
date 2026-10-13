@@ -14,6 +14,12 @@
     ./modules/desktop/home.nix
   ];
 
+  manual = {
+    manpages.enable = true;
+    html.enable = false;
+    json.enable = false;
+  };
+
   home.packages = with pkgs; [
     droidcam
     v4l-utils

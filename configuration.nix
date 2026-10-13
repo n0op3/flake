@@ -20,6 +20,12 @@
     ./modules/desktop/system.nix
   ];
 
+  documentation = {
+    nixos.enable = false;
+    doc.enable = false;
+    info.enable = false;
+  };
+
   nihonConfig = {
     gaming.enable = true;
     plymouth.enable = false;
