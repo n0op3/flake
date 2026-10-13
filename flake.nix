@@ -20,7 +20,7 @@
 
     hyprquickframe = {
       url = "github:n0op3/HyprQuickFrame";
-      inputs.hyprland.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # END Hyprland
