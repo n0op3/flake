@@ -37,7 +37,6 @@
   environment.systemPackages = with pkgs; [
     # Theming utils and libs
     sassc
-    gtk-engine-murrine
     gnome-themes-extra
     glib
     gsettings-desktop-schemas

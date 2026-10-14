@@ -27,11 +27,6 @@
       mountOnMedia = true;
     };
 
-    journald.extraConfig = ''
-      SystemMaxUse=1G
-      MaxRetentionSec=1week
-    '';
-
     earlyoom = {
       enable = true;
       enableNotifications = true;

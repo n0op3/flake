@@ -1,10 +1,9 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-26.05";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -71,7 +70,7 @@
     };
 
     aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix/release-26.05";
+      url = "github:ezKEa/aagl-gtk-on-nix/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -80,7 +79,6 @@
     {
       self,
       nixpkgs,
-      nixpkgs-unstable,
       home-manager,
       ...
     }@inputs:
@@ -89,10 +87,6 @@
       settings = {
         hostname = "shinjuku";
         username = "n0op3";
-      };
-      pkgs-unstable = import nixpkgs-unstable {
-        inherit system;
-        config.allowUnfree = true;
       };
     in
     {
@@ -104,7 +98,6 @@
             system
             inputs
             settings
-            pkgs-unstable
             ;
         };
 
@@ -123,7 +116,6 @@
                   system
                   inputs
                   settings
-                  pkgs-unstable
                   ;
                 nihonConfig = config.nihonConfig;
               };
