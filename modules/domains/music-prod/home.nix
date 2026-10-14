@@ -12,7 +12,6 @@
     calf
     noise-repellent
     lsp-plugins
-    eq10q
     x42-plugins
     (carla.override {
       withQt = true;

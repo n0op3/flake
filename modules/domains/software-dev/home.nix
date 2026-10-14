@@ -1,8 +1,4 @@
-{
-  pkgs,
-  pkgs-unstable,
-  ...
-}:
+{ pkgs, ... }:
 {
   imports = [
     ./gamedev.nix
@@ -38,7 +34,7 @@
     hotspot
     wayland-scanner
     jq
-    pkgs-unstable.opencode
+    opencode
     pkg-config
     tokei
     silicon

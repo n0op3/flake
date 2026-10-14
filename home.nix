@@ -3,7 +3,6 @@
   settings,
   config,
   pkgs,
-  pkgs-unstable,
   ...
 }:
 {
@@ -70,7 +69,7 @@
     sone
     inputs.hiresTi.packages.${pkgs.stdenv.hostPlatform.system}.default
     seahorse
-    pkgs-unstable.tuxedo
+    tuxedo
     ydotool
     presenterm
     lenovo-legion
