@@ -50,7 +50,7 @@
     # Bevy: audio backend
     alsa-lib
 
-    # Bevy: windowing/graphics (Wayland, since you're on Hyprland)
+    # Bevy: windowing/graphics
     wayland
     libxkbcommon
     vulkan-loader
