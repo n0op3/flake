@@ -13,6 +13,7 @@
 
     # Toolchains
     gcc
+    clang-tools
     cmake
     meson
     samurai
