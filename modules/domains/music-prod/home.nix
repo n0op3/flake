@@ -13,8 +13,6 @@
     noise-repellent
     lsp-plugins
     x42-plugins
-    (carla.override {
-      withQt = true;
-    })
+    carla
   ];
 }

@@ -7,18 +7,7 @@
       inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
 
-  environment.pathsToLink = [
-    "/share/applications"
-    "/share/xdg-desktop-portal"
-  ];
-
-  xdg.portal = {
-    enable = true;
-    config.common.default = "*";
-    extraPortals = with inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}; [
-      xdg-desktop-portal-hyprland
-    ];
-  };
+  xdg.portal.config.common.default = "*";
 
   services.pipewire.enable = true;
 
@@ -79,7 +68,6 @@
     };
     packages = with pkgs; [
       nerd-fonts.jetbrains-mono
-      noto-fonts-cjk-sans
       fira-code
     ];
   };

@@ -1,6 +1,5 @@
 {
   inputs,
-  settings,
   config,
   pkgs,
   ...
@@ -43,7 +42,6 @@
     satty
     eog
     libnotify
-    davinci-resolve
     kdePackages.kdenlive
     networkmanager_dmenu
     dragon-drop
@@ -99,13 +97,10 @@
     DOTNET_ROOT_X64 = "${pkgs.dotnet-sdk_10}/share/dotnet";
   };
 
-  home.file."/home/${settings.username}/.config/rofi/config.rasi".enable = false;
   programs.rofi = {
     enable = true;
     plugins = [ pkgs.rofi-emoji ];
   };
-
-  services.kdeconnect.enable = false;
 
   home.file.".local/share/icons/default" = {
     source = "${pkgs.bibata-cursors}/share/icons/Bibata-Modern-Ice/";

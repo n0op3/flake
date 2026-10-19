@@ -15,7 +15,6 @@
     ./modules/display-manager.nix
     ./modules/shell.nix
     ./modules/virtualization.nix
-    ./modules/desktop/graphical-env.nix
     ./modules/domains/system.nix
     ./modules/desktop/system.nix
   ];

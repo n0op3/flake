@@ -1,4 +1,5 @@
 {
+  config,
   inputs,
   lib,
   pkgs,
@@ -22,7 +23,7 @@ in
     };
   };
 
-  config = {
+  config = lib.mkIf config.nihonConfig.gaming.enable {
     programs.waywall = {
       enable = true;
       config = {

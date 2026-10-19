@@ -1,7 +1,7 @@
 { settings, pkgs, ... }: {
   nix.settings = {
-    cores = 10;
-    max-jobs = "auto";
+    cores = 3;
+    max-jobs = 4;
 
     experimental-features = [
       "nix-command"
@@ -14,15 +14,7 @@
     ];
   };
 
-  nixpkgs.config = {
-    allowUnfree = true;
-    permittedInsecurePackages = [
-      "googleearth-pro-7.3.7.1155"
-      "openssl-1.1.1w"
-      "pnpm-10.29.2"
-      "electron-40.10.5"
-    ];
-  };
+  nixpkgs.config.allowUnfree = true;
 
   programs.nh = {
     enable = true;
@@ -56,10 +48,10 @@
     vulkan-loader
 
     # Bevy: windowing fallback (X11, in case anything still probes for it)
-    xorg.libX11
-    xorg.libXcursor
-    xorg.libXrandr
-    xorg.libXi
+    libx11
+    libxcursor
+    libxrandr
+    libxi
 
     # General
     fontconfig

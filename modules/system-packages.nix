@@ -1,7 +1,6 @@
 { inputs, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    linuxPackages.usbip
     (btop.override { cudaSupport = true; })
     usermount
     efibootmgr
