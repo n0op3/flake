@@ -1,5 +1,7 @@
 {
+  config,
   inputs,
+  lib,
   pkgs,
   system,
   ...
@@ -25,33 +27,35 @@ let
   ];
 in
 {
-  environment.systemPackages = with pkgs; [
-    rust-stable
-    (pkgs.runCommand "rust-nightly-bin" { } ''
-      mkdir -p $out/bin
-      ln -s ${rust-nightly}/bin/cargo $out/bin/cargo-nightly
-      ln -s ${rust-nightly}/bin/rustc $out/bin/rustc-nightly
-      ln -s ${rust-nightly}/bin/clippy-driver $out/bin/clippy-driver-nightly
-      ln -s ${rust-nightly}/bin/cargo-clippy $out/bin/cargo-clippy-nightly
-    '')
+  config = lib.mkIf config.nihonConfig.softwareDev.enable {
+    environment.systemPackages = with pkgs; [
+      rust-stable
+      (pkgs.runCommand "rust-nightly-bin" { } ''
+        mkdir -p $out/bin
+        ln -s ${rust-nightly}/bin/cargo $out/bin/cargo-nightly
+        ln -s ${rust-nightly}/bin/rustc $out/bin/rustc-nightly
+        ln -s ${rust-nightly}/bin/clippy-driver $out/bin/clippy-driver-nightly
+        ln -s ${rust-nightly}/bin/cargo-clippy $out/bin/cargo-clippy-nightly
+      '')
 
-    bacon
-    cargo-xwin
-    cargo-audit
-    cargo-nextest
-    cargo-binstall
-    cargo-tarpaulin
+      bacon
+      cargo-xwin
+      cargo-audit
+      cargo-nextest
+      cargo-binstall
+      cargo-tarpaulin
 
-    # NOTE: needed for windows cross-compilation, since the default compiler is NixOS-only
-    llvmPackages.clang-unwrapped
-    llvmPackages.bintools-unwrapped
-  ];
+      # NOTE: needed for windows cross-compilation, since the default compiler is NixOS-only
+      llvmPackages.clang-unwrapped
+      llvmPackages.bintools-unwrapped
+    ];
 
-  # NOTE: Windows C and C++ compiler variables
-  environment.variables = {
-    XWIN_CROSS_COMPILER = "clang";
-    CC_x86_64_pc_windows_msvc = "${pkgs.llvmPackages.clang-unwrapped}/bin/clang-cl";
-    CXX_x86_64_pc_windows_msvc = "${pkgs.llvmPackages.clang-unwrapped}/bin/clang-cl";
-    AR_x86_64_pc_windows_msvc = "${pkgs.llvmPackages.bintools-unwrapped}/bin/llvm-lib";
+    # NOTE: Windows C and C++ compiler variables
+    environment.variables = {
+      XWIN_CROSS_COMPILER = "clang";
+      CC_x86_64_pc_windows_msvc = "${pkgs.llvmPackages.clang-unwrapped}/bin/clang-cl";
+      CXX_x86_64_pc_windows_msvc = "${pkgs.llvmPackages.clang-unwrapped}/bin/clang-cl";
+      AR_x86_64_pc_windows_msvc = "${pkgs.llvmPackages.bintools-unwrapped}/bin/llvm-lib";
+    };
   };
 }

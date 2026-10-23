@@ -9,20 +9,16 @@
   home.packages = with pkgs; [
     hyprlock
     hypridle
-    hyprmon
     hyprshutdown
     hyprpicker
     hyprsunset
-    hyprpolkitagent
     inputs.hyprquickframe.packages.${pkgs.stdenv.hostPlatform.system}.default
     quickshell
-    swaylock
     waybar
     brightnessctl
     playerctl
     wl-clipboard
     clipse
-    rofi-power-menu
     unipicker
     pwvucontrol
     awww

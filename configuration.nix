@@ -27,6 +27,11 @@
 
   nihonConfig = {
     gaming.enable = true;
+    music.enable = false;
+    graphicsDesign.enable = true;
+    softwareDev.enable = true;
+    engineering.enable = true;
+    cybersec.enable = true;
     plymouth.enable = false;
   };
 }

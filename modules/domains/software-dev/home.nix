@@ -1,48 +1,55 @@
-{ pkgs, ... }:
+{
+  lib,
+  nihonConfig,
+  pkgs,
+  ...
+}:
 {
   imports = [
     ./gamedev.nix
     ./webdev.nix
   ];
 
-  home.packages = with pkgs; [
-    # Additional editors
-    vscode
-    vscode-extensions.vadimcn.vscode-lldb
-    glrnvim
+  home.packages = lib.mkIf nihonConfig.softwareDev.enable (
+    with pkgs;
+    [
+      # Additional editors
+      vscode
+      vscode-extensions.vadimcn.vscode-lldb
+      glrnvim
 
-    # Toolchains
-    gcc
-    clang-tools
-    cmake
-    meson
-    samurai
-    gnumake
-    lua51Packages.lua
-    luarocks
-    go
-    python3
-    android-tools
+      # Toolchains
+      gcc
+      clang-tools
+      cmake
+      meson
+      samurai
+      gnumake
+      lua51Packages.lua
+      luarocks
+      go
+      python3
+      android-tools
 
-    # Utilities
-    git-credential-manager
-    git-filter-repo
-    github-cli
-    bear
-    gdb
-    just
-    perf
-    hotspot
-    wayland-scanner
-    jq
-    opencode
-    pkg-config
-    tokei
-    silicon
-    rpi-imager
-    cloudflared
-    litecli
-  ];
+      # Utilities
+      git-credential-manager
+      git-filter-repo
+      github-cli
+      bear
+      gdb
+      just
+      perf
+      hotspot
+      wayland-scanner
+      jq
+      opencode
+      pkg-config
+      tokei
+      silicon
+      rpi-imager
+      litecli
+    ]
+  );
 
   services.syncthing.enable = true;
 

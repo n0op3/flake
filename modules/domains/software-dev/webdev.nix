@@ -1,6 +1,13 @@
-{ pkgs, ... }: {
-  home.packages = with pkgs; [
-    nodejs
-    postman
-  ];
+{
+  lib,
+  nihonConfig,
+  pkgs,
+  ...
+}:
+{
+  config = lib.mkIf nihonConfig.softwareDev.enable {
+    home.packages = with pkgs; [
+      nodejs
+    ];
+  };
 }

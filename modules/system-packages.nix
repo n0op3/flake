@@ -2,7 +2,6 @@
 {
   environment.systemPackages = with pkgs; [
     (btop.override { cudaSupport = true; })
-    usermount
     efibootmgr
     util-linux
     file
@@ -28,12 +27,10 @@
     man-pages
     tldr
     zip
-    jdk21
     vulkan-tools
     vulkan-loader
     powertop
     cachix
-    nix-ld
     bandwhich
     wineWow64Packages.stable
     winetricks
