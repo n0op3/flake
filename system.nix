@@ -18,6 +18,12 @@
     flatpak.enable = true;
     printing.enable = true;
 
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
+    };
+
     logind.settings.Login = {
       HandleLidSwitch = "suspend";
       HandlePowerKey = "suspend";
