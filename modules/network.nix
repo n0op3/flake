@@ -27,6 +27,7 @@
     firewall = rec {
       enable = true;
       checkReversePath = "loose";
+      trustedInterfaces = [ "enp8s0" ];
 
       # Minecraft
       allowedTCPPorts = [ 25565 ];
