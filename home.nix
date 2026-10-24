@@ -42,6 +42,7 @@
     libnotify
     kdePackages.kdenlive
     networkmanager_dmenu
+    cloudflared
     dragon-drop
     ffmpeg
     yt-dlp
