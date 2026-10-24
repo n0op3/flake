@@ -21,6 +21,7 @@
     clipse
     unipicker
     pwvucontrol
+    qpwgraph
     awww
     swaynotificationcenter
   ];

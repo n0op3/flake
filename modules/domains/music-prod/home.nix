@@ -13,7 +13,6 @@
       yabridgectl
       sfizz-ui
       audacity
-      qpwgraph
       pipewire.jack
       calf
       noise-repellent
