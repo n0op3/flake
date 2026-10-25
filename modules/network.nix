@@ -36,6 +36,7 @@
       allowedUDPPorts = [
         1982
         25565
+        4445
       ];
 
       allowedTCPPortRanges = [
