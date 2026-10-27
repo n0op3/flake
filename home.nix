@@ -52,6 +52,7 @@
     ffmpegthumbnailer
     fd
     russ
+    tuxedo
     pamixer
     qalculate-gtk
     firefoxpwa
