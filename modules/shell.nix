@@ -10,6 +10,7 @@
   environment.shellAliases = {
     "nrs" = "sudo nixos-rebuild switch";
     "nrsu" = "sudo nixos-rebuild switch --upgrade";
+    "gens" = "nixos-rebuild list-generations";
     "nsp" = "nom-shell -p --command zsh";
     "dv" = "nom develop -c $SHELL";
     "dvi" = "nom develop --impure -c $SHELL";

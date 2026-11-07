@@ -67,7 +67,6 @@
     seahorse
     ydotool
     presenterm
-    lenovo-legion
   ];
 
   programs.firefox = {

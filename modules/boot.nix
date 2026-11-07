@@ -10,7 +10,7 @@
 
   boot = lib.mkMerge [
     {
-      kernelPackages = pkgs.linuxPackages_7_2;
+      kernelPackages = pkgs.linuxPackages_latest;
 
       kernel.sysctl = {
         "kernel.sysrq" = 1;
@@ -18,10 +18,7 @@
         "kernel.panic_on_oops" = 1;
       };
 
-      initrd = {
-        systemd.enable = true;
-        checkJournalingFS = false;
-      };
+      initrd.checkJournalingFS = false;
 
       loader = {
         timeout = 0;

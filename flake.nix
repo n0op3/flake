@@ -39,11 +39,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    concord = {
-      url = "github:chojs23/concord";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     themecord = {
       url = "github:danihek/themecord";
       inputs.nixpkgs.follows = "nixpkgs";

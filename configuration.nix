@@ -27,7 +27,7 @@
 
   nihonConfig = {
     gaming.enable = true;
-    music.enable = false;
+    music.enable = true;
     graphicsDesign.enable = true;
     softwareDev.enable = true;
     engineering.enable = true;
