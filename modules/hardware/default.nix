@@ -37,7 +37,7 @@
   };
   services.blueman.enable = true;
 
-  boot.kernelParams = [ "resume_offset=13740032" ];
+  boot.kernelParams = [ "resume_offset=20641792" ];
 
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
