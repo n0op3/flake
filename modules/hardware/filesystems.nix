@@ -7,10 +7,7 @@
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/328E-3D2D";
     fsType = "vfat";
-    options = [
-      "fmask=0022"
-      "dmask=0022"
-    ];
+    options = [ "umask=0077" ];
   };
 
   fileSystems."/mnt/data" = {
