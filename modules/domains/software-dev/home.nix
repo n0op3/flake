@@ -53,7 +53,14 @@
 
   services.syncthing.enable = true;
 
-  programs.jujutsu.enable = true;
+  programs.jujutsu = {
+      enable = true;
+      settings.user = {
+          name = "n0op3";
+          email = "n0op3@proton.me";
+      };
+  };
+
   programs.git = {
     enable = true;
     settings = {
