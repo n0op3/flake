@@ -10,7 +10,6 @@
     home.packages = with pkgs; [
       gimp
       inkscape
-      fontforge-gtk
       krita
       figma-linux
       (pkgs.symlinkJoin {

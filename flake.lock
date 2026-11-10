@@ -621,24 +621,6 @@
         "type": "github"
       }
     },
-    "mcsr-nixos": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1793742690,
-        "narHash": "sha256-Kx1YbZvNEUVjz4Xpjh/Li8SjKOxiGyVQ3zvyCNqu22k=",
-        "rev": "665b5871478dab687c1b140e471d594d842c8e0b",
-        "type": "tarball",
-        "url": "https://git.uku3lig.net/api/v1/repos/uku/mcsr-nixos/archive/665b5871478dab687c1b140e471d594d842c8e0b.tar.gz"
-      },
-      "original": {
-        "type": "tarball",
-        "url": "https://git.uku3lig.net/uku/mcsr-nixos/archive/main.tar.gz"
-      }
-    },
     "millenium": {
       "inputs": {
         "millennium-src": "millennium-src",
@@ -781,7 +763,6 @@
         "hyprquickframe": "hyprquickframe",
         "kawaru": "kawaru",
         "mac-style-plymouth": "mac-style-plymouth",
-        "mcsr-nixos": "mcsr-nixos",
         "millenium": "millenium",
         "musnix": "musnix",
         "nixpkgs": "nixpkgs_2",

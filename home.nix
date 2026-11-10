@@ -36,7 +36,6 @@
     bibata-cursors
     cava
     scrcpy
-    grimblast
     satty
     eog
     libnotify
@@ -46,14 +45,13 @@
     dragon-drop
     ffmpeg
     yt-dlp
-    ani-cli
-    ytfzf
     file-roller
     ffmpegthumbnailer
     fd
     russ
     tuxedo
     pamixer
+    pulseaudio
     qalculate-gtk
     firefoxpwa
     nwg-look
@@ -66,7 +64,6 @@
     inputs.hiresTi.packages.${pkgs.stdenv.hostPlatform.system}.default
     seahorse
     ydotool
-    presenterm
   ];
 
   programs.firefox = {

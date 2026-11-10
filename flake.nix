@@ -59,11 +59,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    mcsr-nixos = {
-      url = "https://git.uku3lig.net/uku/mcsr-nixos/archive/main.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix/main";
       inputs.nixpkgs.follows = "nixpkgs";
