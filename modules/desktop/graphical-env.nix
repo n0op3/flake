@@ -9,7 +9,22 @@
 
   xdg.portal.config.common.default = "*";
 
-  services.pipewire.enable = true;
+  services.pipewire = {
+    enable = true;
+    extraConfig.pipewire-pulse."51-block-vesktop-source" = {
+      "pulse.rules" = [
+        {
+          matches = [
+            {
+              "application.process.binary" = "electron";
+              "application.name" = "vesktop";
+            }
+          ];
+          actions.quirks = [ "block-source-volume" ];
+        }
+      ];
+    };
+  };
 
   environment.sessionVariables = {
     XDG_DATA_DIRS = [
