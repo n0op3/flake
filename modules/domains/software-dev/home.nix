@@ -48,6 +48,7 @@
       silicon
       rpi-imager
       litecli
+      hyperfine
     ]
   );
 
