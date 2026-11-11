@@ -7,7 +7,15 @@
       inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
 
-  xdg.portal.config.common.default = "*";
+  xdg.portal = {
+    enable = true;
+    config.common.default = "*";
+  };
+
+  environment.pathsToLink = [
+    "/share/applications"
+    "/share/xdg-desktop-portal"
+  ];
 
   services.pipewire = {
     enable = true;

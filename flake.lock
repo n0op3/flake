@@ -200,6 +200,36 @@
         "type": "github"
       }
     },
+    "gloview": {
+      "inputs": {
+        "hyprland": [
+          "hyprland"
+        ],
+        "nixpkgs": [
+          "gloview",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "gloview",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793443355,
+        "narHash": "sha256-M6LBP59p9v241hQ5vSmk6gjhKQavTrImNOGy+HpWwSo=",
+        "owner": "fedsfarm",
+        "repo": "gloview",
+        "rev": "67857e6f8b715d6d100068ef89ba554c8fecb918",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fedsfarm",
+        "repo": "gloview",
+        "type": "github"
+      }
+    },
     "hiresTi": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -757,6 +787,7 @@
         "aagl": "aagl",
         "blender-bin": "blender-bin",
         "fenix": "fenix",
+        "gloview": "gloview",
         "hiresTi": "hiresTi",
         "home-manager": "home-manager",
         "hyprland": "hyprland",

@@ -22,6 +22,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    gloview = {
+      url = "github:fedsfarm/gloview";
+      inputs.hyprland.follows = "hyprland";
+    };
+
     # END Hyprland
 
     fenix = {
