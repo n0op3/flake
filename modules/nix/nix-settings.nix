@@ -30,6 +30,10 @@
     # Any missing dynamic libraries for unpackaged programs
     # go here, NOT in environment.systemPackages
 
+    # General
+    fontconfig
+    freetype
+
     # Core C/C++ runtime (rustup toolchain needs)
     stdenv.cc.cc.lib # libstdc++, libgcc_s
     zlib
@@ -52,9 +56,5 @@
     libxcursor
     libxrandr
     libxi
-
-    # General
-    fontconfig
-    freetype
   ];
 }

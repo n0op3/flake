@@ -4,5 +4,6 @@
     ./cachix.nix
     ./cleanup.nix
     ./overlays.nix
+    ./fixes.nix
   ];
 }
