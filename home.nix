@@ -58,7 +58,6 @@
     ungoogled-chromium
     aw-qt
     awatcher
-    libinput-gestures
     tidal-hifi
     sone
     inputs.hiresTi.packages.${pkgs.stdenv.hostPlatform.system}.default
