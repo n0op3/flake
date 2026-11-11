@@ -66,6 +66,22 @@
         "--limit"
         "8"
       ];
+      aliases = {
+        fetchall = [
+          "git"
+          "fetch"
+          "--all-remotes"
+        ];
+        pushall = [
+          "util"
+          "exec"
+          "--"
+          "bash"
+          "-c"
+          ''for r in $(jj git remote list | awk '{print $1}'); do jj git push --remote "$r" "$@"; done''
+          ""
+        ];
+      };
     };
   };
 
