@@ -1,4 +1,4 @@
-{ ... }: {
+{
   time.timeZone = "Europe/Warsaw";
 
   security.pam.services = {

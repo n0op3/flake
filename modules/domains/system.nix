@@ -1,4 +1,4 @@
-{ ... }: {
+{
   imports = [
     ./software-dev/system.nix
     ./gaming/system.nix

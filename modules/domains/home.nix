@@ -1,4 +1,4 @@
-{ ... }: {
+{
   imports = [
     ./software-dev/home.nix
     ./engineering.nix
