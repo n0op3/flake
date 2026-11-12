@@ -12,6 +12,7 @@
       millennium-steam
       steam-run
       gamemode
+      gamescope
       prismlauncher
       smassh
       protonplus
