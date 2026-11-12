@@ -58,9 +58,7 @@
     ungoogled-chromium
     aw-qt
     awatcher
-    tidal-hifi
     sone
-    inputs.hiresTi.packages.${pkgs.stdenv.hostPlatform.system}.default
     seahorse
     ydotool
   ];

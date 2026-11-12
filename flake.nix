@@ -49,11 +49,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hiresTi = {
-      url = "github:yelanxin/hiresTI";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     blender-bin = {
       url = "github:edolstra/nix-warez?dir=blender";
       inputs.nixpkgs.follows = "nixpkgs";
