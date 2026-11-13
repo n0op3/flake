@@ -12,6 +12,7 @@
     ];
 
     environment.systemPackages = with pkgs; [
+      binaryninja-free
       ghidra
       nmap
       tcpdump
