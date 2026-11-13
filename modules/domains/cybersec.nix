@@ -12,6 +12,7 @@
     ];
 
     environment.systemPackages = with pkgs; [
+      ghidra
       nmap
       tcpdump
       nettools
