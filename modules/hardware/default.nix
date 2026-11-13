@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   modulesPath,
   ...
 }:
@@ -23,8 +22,10 @@
   ];
   boot.kernelModules = [
     "kvm-intel"
+    "kvm-intel"
     "v4l2loopback"
     "snd-aloop"
+    "ntsync"
   ];
   boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback
