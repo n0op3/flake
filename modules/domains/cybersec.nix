@@ -13,6 +13,7 @@
 
     environment.systemPackages = with pkgs; [
       binaryninja-free
+      tor-browser
       ghidra
       nmap
       tcpdump
