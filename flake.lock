@@ -757,6 +757,7 @@
         "millenium": "millenium",
         "musnix": "musnix",
         "nixpkgs": "nixpkgs_2",
+        "sone": "sone",
         "themecord": "themecord"
       }
     },
@@ -795,6 +796,26 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "sone": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794143566,
+        "narHash": "sha256-rVKPQn3OvN8soEvXYZGEpbGM/HvpUHPGZZxS8eVG0Ew=",
+        "owner": "lullabyX",
+        "repo": "sone",
+        "rev": "8ea067dc65ada8f8b4a361bddcacd733d2b59b9d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lullabyX",
+        "repo": "sone",
         "type": "github"
       }
     },

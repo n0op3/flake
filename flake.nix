@@ -13,6 +13,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # nixpkgs still ships 0.23.0, which has severe WebKitGTK UI lag on
+    # NVIDIA/dual-GPU systems. Upstream master has unreleased rendering fixes
+    # (baked blur canvases, throttled banners, render-mode selector).
+    sone = {
+      url = "github:lullabyX/sone";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Hyprland
 
     hyprland.url = "github:hyprwm/Hyprland";
